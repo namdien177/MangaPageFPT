@@ -67,19 +67,6 @@ div.collapse{
 	margin-top: 0.5vw;
 }
 
-.advertismentBlock{
-	padding: 0px;
-	margin: 0px;
-	width: 949px;
-	height: 20px;
-
-}
-
-.subjectdiv{
-	width: 100%
-
-}
-
 .friendbox{
 	margin:0px;
 	padding: 0px;
@@ -111,31 +98,86 @@ div.carousel > div.carousel-inner{
 	margin: 0px
 }
 
-.square-space {
-  	margin:0;
-  	display:flex;
-  	flex-wrap:wrap;
-  	justify-content:space-around;
-}
-
-.square {
-  	width:100%; 
-    margin:0px;
-}
-
-.flexheight{
+.author-suggestionSection{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
 	display: flex;
 }
 
-.flexheight-col{
-	flex: 1; /* additionally, equal width */
-  	
+.authorsection{
+	flex-grow: 3;
+	display: flex;
+	flex-direction: column;
 }
 
-.square:before {
-	content: "";
-	display: block;
-	padding-top: 100%;
+.suggestsection{
+	flex-grow: 1;
+}
+
+.advertismentBlock{
+	padding: 0px;
+	margin: 0px;
+	min-width: 949px;
+	min-height: 20px;
+}
+
+.imgadv{
+	width: 100%;
+}
+
+.subjectdiv{
+	width: 100%;
+	padding: 1.8%;
+	background-color: grey;
+	display: flex;
+
+}
+
+.subjectimg{
+	flex-grow: 2;
+}
+
+.subjectdesc{
+	flex-grow: 5;
+	display: flex;
+	flex-direction: column;
+}
+
+.sd-title{
+	text-overflow: ellipsis;
+	width: 100%;
+	overflow: auto;
+	padding: 0px;
+}
+
+.sd-desc{
+	width: 100%;
+	overflow: auto;
+	text-overflow: ellipsis;
+	height: 80px
+}
+
+.sd-desc > p{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	line-height:20px;
+	-webkit-line-clamp: 3; /* number of lines to show */
+	-webkit-box-orient: vertical;
+	text-align:justify;
+}
+
+.sd-more{
+	width: 100%;
+}
+
+.sd-more > a {
+	text-decoration: none;
+}
+
+.subjectfeature{
+	flex-grow: 5;
 }
 
 .inner-box {
