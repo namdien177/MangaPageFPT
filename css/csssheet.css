@@ -4,6 +4,9 @@ body{
 	margin: 0px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.radian{
+	background: linear-gradient(to top, #202e2e 90%, #bffcfc 180%);
+}
 
 .iframebody{
 	height: 500px;
@@ -187,4 +190,16 @@ div.carousel > div.carousel-inner{
     bottom: 0;
     right: 0;
     background: rgba(0, 0, 255, 0.35)
+}
+
+
+
+
+
+
+
+
+
+.first-container{
+	width: 100%
 }
