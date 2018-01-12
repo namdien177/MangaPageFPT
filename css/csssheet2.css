@@ -18,6 +18,10 @@ nav.navbar{
 	color: #202E2E;
 }
 
+.abspadd{
+  padding: 0px;
+}
+
 .first-container{
 	width: 100%;
 	padding: 0px;
@@ -36,12 +40,25 @@ nav.navbar{
 .mh-inner-author-suggest{
 	display: inline-block;
 	padding: 0px;
-	padding-bottom: 1vw;
 	background-color: grey;
 }
 
 .mh-inner-author{
 	padding: 0px;
+}
+
+.mh-inner-suggest{
+  padding: 0px;
+}
+
+.mh-inner-suggest > a {
+  padding: 0px;
+}
+
+.mh-inner-suggest >a > img{
+  display: block;
+  width: 100%;
+  padding: 0px;
 }
 
 .mh-right-friend-list{
@@ -58,6 +75,10 @@ nav.navbar{
 	padding-bottom: 1vw;
 }
 
+.img-responsive{
+  width: 100%;
+}
+
 .mh-author-desc{
 	width: 100%;
 	overflow: hidden;
@@ -69,6 +90,56 @@ nav.navbar{
 	text-align:justify;
 	height: 5vw;
 }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  opacity: 0.3;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.div-img-overlay:hover .overlay {
+  width: 100%;
+}
+
+.text-img-overlay {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (min-width: 992px) {
   .carousel-move .carousel-inner > .active.left,

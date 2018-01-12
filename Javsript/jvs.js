@@ -1,5 +1,5 @@
 (function(){
-  $('#updateslide').carousel({ interval: 2000 });
+  $('#updateslide').carousel({ interval: false });
   
   $('.carousel-move .item').each(function(){
     var itemToClone = $(this);
