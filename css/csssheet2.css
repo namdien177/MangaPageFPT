@@ -70,4 +70,54 @@ nav.navbar{
 	height: 5vw;
 }
 
+@media all and (min-width: 992px) {
+  .carousel-move .carousel-inner > .active.left,
+  .carousel-move .carousel-inner > .prev {
+    left: -16.666%;
+  }
+  .carousel-move .carousel-inner > .active.right,
+  .carousel-showsixmoveone .carousel-inner > .next {
+    left: 16.666%;
+  }
+  .carousel-move .carousel-inner > .left,
+  .carousel-move .carousel-inner > .prev.right,
+  .carousel-move .carousel-inner > .active {
+    left: 0;
+  }
+  .carousel-move .carousel-inner .cloneditem-3,
+  .carousel-move .carousel-inner .cloneditem-4,
+  .carousel-move .carousel-inner .cloneditem-5 {
+    display: block;
+  }
+}
 
+@media all and (min-width: 992px) and (transform-3d), all and (min-width: 992px) and (-webkit-transform-3d) {
+  .carousel-move .carousel-inner > .item.active.right,
+  .carousel-move .carousel-inner > .item.next {
+    -webkit-transform: translate3d(16.666%, 0, 0);
+            transform: translate3d(16.666%, 0, 0);
+    left: 0;
+  }
+  .carousel-move .carousel-inner > .item.active.left,
+  .carousel-move .carousel-inner > .item.prev {
+    -webkit-transform: translate3d(-16.666%, 0, 0);
+            transform: translate3d(-16.666%, 0, 0);
+    left: 0;
+  }
+  .carousel-move .carousel-inner > .item.left,
+  .carousel-move .carousel-inner > .item.prev.right,
+  .carousel-move .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    left: 0;
+  }
+}
+.carousel-move .cloneditem-1,
+.carousel-move .cloneditem-2,
+.carousel-move .cloneditem-3, {
+  display: none;
+}
+.carousel-move .carousel-control {
+  width: 4%;
+  background-image: none;
+}
