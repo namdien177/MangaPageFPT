@@ -45,6 +45,7 @@ nav.navbar{
 
 .mh-inner-author{
 	padding: 0px;
+  display: inline-block;
 }
 
 .mh-inner-suggest{
@@ -104,6 +105,10 @@ nav.navbar{
   transition: .5s ease;
 }
 
+.div-img-overlay{
+  position: relative;
+}
+
 .div-img-overlay:hover .overlay {
   width: 100%;
 }
@@ -120,14 +125,90 @@ nav.navbar{
   -ms-transform: translate(-50%, -50%);
 }
 
+.second-container{
+    width: 100%;
+    padding: 0px;
+}
 
+.mh-second-inner-topmanga{
+  padding: 0.5vw;
+  margin:0px;
+  display:block;
+}
 
+.mh-second-inner-advertisment{
 
+}
 
+.mh-second-inner-topmanga-header{
+  display: inline-flex;
+  justify-content: space-between;
+  align-content: center;
+}
 
+.mh-second-inner-topmanga-manga{
+  padding: 0.5vw;
+  margin: 0px;
+}
 
+.mh-second-inner-topmanga-header > h2{
 
+}
 
+.mh-second-inner-topmanga-header > a{
+  text-decoration: none;
+}
+
+.top-manga{
+  display: flex;
+  color: white;
+}
+
+.top-manga-img{
+  flex: 2;
+}
+
+.top-manga-desc{
+  flex: 3;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.top-manga-desc > h4{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height:20px;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align:justify;
+}
+
+.top-manga-desc > p{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height:20px;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align:justify;
+}
+
+.mh-second-inner-topmanga-manga > div {
+  padding: 0px;
+}
+
+.top-manga-left{
+  flex: 1;
+}
+
+.top-manga-right{
+  flex: 2;
+  display: flex;
+  display: 
+}
 
 
 
