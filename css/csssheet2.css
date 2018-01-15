@@ -95,7 +95,6 @@ nav.navbar{
 .overlay {
   position: absolute;
   bottom: 0;
-  left: 0;
   right: 0;
   background-color: #008CBA;
   opacity: 0.3;
