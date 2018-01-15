@@ -28,13 +28,12 @@ nav.navbar{
 }
 
 .mh-left-update-author-suggest{
-	border: 0.5px solid black;
 	background-color: transparent;
 	padding: 0px;
 }
 
 .mh-inner-update{
-	padding: 0.5vw;
+	padding: 0px;
 }
 
 .mh-inner-author-suggest{
@@ -95,7 +94,6 @@ nav.navbar{
 .overlay {
   position: absolute;
   bottom: 0;
-  left: 0;
   right: 0;
   background-color: #008CBA;
   opacity: 0.3;
@@ -210,7 +208,21 @@ nav.navbar{
   display: 
 }
 
+div.polaroid {
+  background-color: white;
+  padding: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
 
+div.polaroid > img {
+  width: 100%;
+}
+
+div.text-on-img {
+  text-align: center;
+  padding: 10px 20px;
+}
 
 
 
