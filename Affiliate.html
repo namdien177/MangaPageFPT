@@ -17,7 +17,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <!-- CSS sheets -->
-        <link rel="stylesheet" type="text/css" href="css/csssheet.css">
+        <link rel="stylesheet" type="text/css" href="css/csssheet2.css">
 </head>
 <body>
 	<!--Header-->
@@ -56,6 +56,31 @@
         </div>
     </nav>
 	<!--End Header-->
-	<div class=""></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 team">
+				<button onclick="toggleauthor()"  id="author" class='myButt one author'>
+				Tác giả
+				</button>
+				<!--Form create-->
+				<div id="form-author" class='myButt one form-hide'>
+				2
+				</div>
+				<!--End Form create-->
+			</div>
+			<div class="col-md-5 team translator" >
+				<button onclick="toggletrans()" id="translator" class='myButt one translate'>
+				Nhóm dịch
+				</button>
+				<!--Form create-->
+				<div id="form-translator" class='myButt one form-hide'>
+				2
+				</div>
+				<!--End Form create-->
+
+			</div>
+		</div>
+	</div>
+	<script  src="Javsript/jvs.js"></script>
 </body>
 </html>

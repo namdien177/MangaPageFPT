@@ -1,3 +1,6 @@
+$( document ).ready(function() {
+   var count = 0;
+});
 (function(){
   $('#updateslide').carousel({ interval: false });
   
@@ -22,3 +25,21 @@
     }
   });
 }());
+function toggletrans(){
+  var element = document.getElementById("author");
+    element.classList.remove("slideUp");
+    var element = document.getElementById("form-translator");
+    element.classList.remove("form-hide");
+    document.getElementById('translator').classList.toggle('slideUp');
+    var element = document.getElementById("form-author");
+    element.classList.add("form-hide");
+}
+function toggleauthor(){
+    var element = document.getElementById("translator");
+    element.classList.remove("slideUp");
+    var element = document.getElementById("form-translator");
+    element.classList.add("form-hide");
+    var element = document.getElementById("form-author");
+    element.classList.remove("form-hide");
+    document.getElementById('author').classList.toggle('slideUp')
+}
