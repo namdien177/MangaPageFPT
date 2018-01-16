@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+        <title>Testing Project</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- CSS sheets -->
+        <link rel="stylesheet" type="text/css" href="css/csssheet2.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navibar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand" href="#">MangaHub</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navibar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Author</a></li>
+                    <li><a href="#">Translate Team</a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                            <input type="text" style="min-width: 25vw" class="form-control" placeholder="Search manga name, author, translate team, ...">
+                            <div class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">
+                                                    <i class="glyphicon glyphicon-search"></i>
+                                            </button>
+                                </div>
+                    </div>
+            </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="col-md-8 col-xs-12">
+    <h1 style="color: red"> Update manga</h1>
+    <hr>
+    	<form>
+    		<div>
+    			
+    			<p style="color: red">Tên truyện<span class="text-danger"> (*)</span></p>
+    			<input id="Tên truyện" type="text" class="form-control" name ="tên truyện" placeholder="tên truyện" required>
+    		</div>
+
+    		<div style="margin-top: 10px">
+				<p style="color: red">URL truyện<span class="text-danger"> (*)</span></p>
+                <input id="URL" type="text" class="form-control" name ="URL" placeholder="Url cho truyện" required">
+			</div>
+
+			<div style="margin-top: 10px">
+				<p style="color: red">Notification</p>
+                <input id="Notification" type="text" class="form-control" name ="Notification" placeholder="Có thể gọi là thông báo cái gì đó :v" required">
+			</div>
+
+			<div style="margin-top: 10px">
+				<p style="color: red; margin-top: 13px; margin-right: : 1	5px "; class="col-md-2">Bìa truyện<span class="text-danger"> (*)</span></p>
+                <button class="btn btn-success col-md-4" type="submit" value="Bìa truyện" style="margin-top: 10px; border-radius: 5px; color: #F20C1C; background-color: #EEBB09; margin-right:10px; margin-bottom: 40px"><i class="glyphicon glyphicon-plus"></i> Upload bìa truyện</button>
+			</div>
+
+			<div style="margin-top: 15px;">
+				<p style="color: red; margin-right: 25px" class="col-md-6">Tác giả  <i class="glyphicon glyphicon-question-sign"></i></p>
+                <input id="tác giả" type="text" class="form-control" name ="tác giả" placeholder="tên của tác giả">
+			</div>
+
+			<div style="margin-top: 10px">
+				<p style="color: red">Nhóm dịch  <i class="glyphicon glyphicon-question-sign"></i></p>
+                <input id="Nhóm dịch" type="text" class="form-control" name ="Nhóm dịch" placeholder="tên của nhóm dịch">
+			</div>
+
+			<div style="margin-top: 10px">
+				<p style="color: red">Nguồn  <i class="glyphicon glyphicon-question-sign"></i></p>
+                <input id="Nguồn" type="text" class="form-control" name ="Nguồn" placeholder="Nguồn ở đâu">
+			</div>
+
+			<div style="margin-top: 10px">
+				<p style="color: red">Tóm tắt truyện<span class="text-danger"> (*)</span></p>
+                <input id="tóm tắt" type="text" class="form-control" name ="tóm tắt" placeholder="Tóm tắt Nội dung " required">
+			</div>
+
+			<div style="margin-top: 10px">
+				<p style="color: red">Trạng Thái</p>
+               
+                 <select name="Region" style="margin-right: 25px; width: 10vw;">
+                  <option value="1">Đang tiến hành</option>
+                  <option value="2">Đã hoàn thành</option>
+                  <option value="3">Tạm ngưng/Drop</option>
+                 </select>
+			</div>
+			
+			<button class="btn btn-success col-md-4" type="submit" value="Bìa truyện" style="margin-top: 20px; border-radius: 5px; color: #F20C1C; background-color: #EEBB09; margin-right:10px; margin-bottom: 40px">Ok</button>
+
+		
+    	</form>
+	
+    </div>
+	
+
+
+ <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script  src="Javsript/jvs.js"></script>
+</body>
+</html>
