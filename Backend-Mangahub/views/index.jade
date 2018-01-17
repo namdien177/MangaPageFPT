@@ -1,0 +1,242 @@
+extends layout
+
+block content
+    nav.navbar.navbar-default
+        .container-fluid
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navibar')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='#') MangaHub
+            #navibar.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li.active
+                        a(href='#') Home
+                    li
+                        a(href='#') Category
+                    li
+                        a(href='#') Author
+                    li
+                        a(href='#') Translate Team
+                form.navbar-form.navbar-left
+                    .input-group
+                        input.form-control(type='text', style='min-width: 25vw', placeholder='Search manga name, author, translate team, ...')
+                        .input-group-btn
+                            button.btn.btn-default(type='submit')
+                                i.glyphicon.glyphicon-search
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href='login.html')
+                            span.glyphicon.glyphicon-user
+                            |  Sign Up
+                    li
+                        a(href='login.html')
+                            span.glyphicon.glyphicon-log-in
+                            |  Login
+    .first-container
+        .mh-left-update-author-suggest.col-sm-10.col-sm-12
+            .mh-inner-update.col-md-12.col-sm-12
+                h2.mh-big-title
+                    | Recent update
+                #updateslide.carousel.slide.carousel-move(data-interval='false', data-pause='hover', data-wrap='true')
+                    // carousel data start here!
+                    .carousel-inner
+                        // a single slide
+                        .item.active
+                            // mangas on one slide
+                            .col-sm-2.col-xs-2
+                                img.img-responsive(src='3166_dd48_960.jpeg')
+                                .carousel-caption
+                                    span Bakemonogatari
+                                    small Chap 1
+                        .item
+                            // mangas on one slide
+                            .col-sm-2.col-xs-2
+                                img.img-responsive(src='3166_dd48_960.jpeg')
+                                .carousel-caption
+                                    span Bakemonogatari
+                                    small Chap 2
+                        .item
+                            // mangas on one slide
+                            .col-sm-2.col-xs-2
+                                img.img-responsive(src='3166_dd48_960.jpeg')
+                                .carousel-caption
+                                    span Bakemonogatari
+                                    small Chap 3
+                        .item
+                            // mangas on one slide
+                            .col-sm-2.col-xs-2
+                                img.img-responsive(src='3166_dd48_960.jpeg')
+                                .carousel-caption
+                                    span Bakemonogatari
+                                    small Chap 4
+                        .item
+                            // mangas on one slide
+                            .col-sm-2.col-xs-2
+                                img.img-responsive(src='3166_dd48_960.jpeg')
+                                .carousel-caption
+                                    span Bakemonogatari
+                                    small Chap 5
+                        .item
+                            // mangas on one slide
+                            .col-sm-2.col-xs-2
+                                img.img-responsive(src='3166_dd48_960.jpeg')
+                                .carousel-caption
+                                    span Bakemonogatari
+                                    small Chap 6
+                        .item
+                            // mangas on one slide
+                            .col-sm-2.col-xs-2
+                                img.img-responsive(src='3166_dd48_960.jpeg')
+                                .carousel-caption
+                                    span Bakemonogatari
+                                    small Chap 7
+                        .item
+                            // mangas on one slide
+                            .col-sm-2.col-xs-2
+                                img.img-responsive(src='3166_dd48_960.jpeg')
+                                .carousel-caption
+                                    span Bakemonogatari
+                                    small Chap 8
+                    a.left.carousel-control(style='max-width: 1vw', href='#updateslide', data-slide='prev')
+                        i.glyphicon.glyphicon-chevron-left
+                    a.right.carousel-control(style='max-width: 1vw', href='#updateslide', data-slide='next')
+                        i.glyphicon.glyphicon-chevron-right
+            .mh-inner-author-suggest.col-sm-12.col-sm-12
+                .mh-inner-author.col-sm-9.col-sm-12
+                    .col-sm-12.col-xs-12.advertisment
+                        img.img-responsive(src='advertisment.png')
+                    .col-sm-2.col-xs-4
+                        img.img-responsive(src='1398200116392.jpg')
+                    .col-sm-5.col-xs-8
+                        h3
+                            | Feature:
+                            span Admin Team
+                        hr
+                        p.mh-author-desc
+                            | This is a default account. This account will upload some sample manga to test the site. Be knowledged that this account will not answer or require anything from user. Thank you for visiting this website.sssss sssssssssss ssssssssssssss ssss sssss sssssss sss
+                        .col-sm-12.col-sm-12(style='display: inline-block; padding: 0px; margin-top: 0.5vw')
+                            button.btn.btn-default.col-sm-6.col-xs-12(href='', style='border-radius: 0px') More Information
+                            button.btn.btn-warning.col-sm-6.col-xs-12(href='', style='border-radius: 0px') Follow
+                    .col-sm-5.col-xs-12.abspadd
+                        | d
+                .mh-inner-suggest.col-sm-3.col-sm-12.abspadd.div-img-overlay
+                    img.img-responsive(src='suggest.png')
+                    // TODO: tự cắt ảnh or chỉ hiện ảnh full with nhưng height giữ nguyên rồi làm animation trôi ảnh từ trên xuống
+                    .overlay
+                        .text-img-overlay Bakemonogatari
+        .mh-right-friend-list
+    .second-container
+        // Top hot manga
+        .mh-second-inner-topmanga.col-sm-10.col-xs-12
+            .mh-second-inner-topmanga-header.col-sm-12.col-xs-12
+                h2 Top Hot Manga
+                a(href='')
+                    h2 More...
+            .mh-second-inner-topmanga-manga.col-sm-12.col-xs-12(style='background-color: #3d4949')
+                div(style='border: 1px solid red; padding: 5px; margin: 0px; width: 100%; display: inline-block;')
+                    .top-manga.col-sm-4.col-xs-12
+                        .top-manga-img
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                        .top-manga-desc
+                            h4 Bakemonogatari Serires
+                            hr
+                            p
+                                | This is a default account. This account will upload some sample manga to test the site. Be knowledged that this account will not answer or require anything from user. Thank you for visiting this website.sssss sssssssssss ssssssssssssss ssss sssss sssssss sss
+                            button.btn.btn-block.btn-success View more
+                    .top-manga.col-sm-4.col-xs-12
+                        .top-manga-img
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                        .top-manga-desc
+                            h4 Bakemonogatari Serires
+                            hr
+                            p
+                                | This is a default account. This account will upload some sample manga to test the site. Be knowledged that this account will not answer or require anything from user. Thank you for visiting this website.sssss sssssssssss ssssssssssssss ssss sssss sssssss sss
+                            button.btn.btn-block.btn-success View more
+                    .top-manga.col-sm-4.col-xs-12
+                        .top-manga-img
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                        .top-manga-desc
+                            h4 Bakemonogatari Serires
+                            hr
+                            p
+                                | This is a default account. This account will upload some sample manga to test the site. Be knowledged that this account will not answer or require anything from user. Thank you for visiting this website.sssss sssssssssss ssssssssssssss ssss sssss sssssss sss
+                            button.btn.btn-block.btn-success View more
+                div(style='border: 1px solid blue; padding: 5px; margin: 0px; width: 100%; display: inline-block;')
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+                    .col-sm-2.col-xs-4(style='padding: 5px')
+                        .polaroid
+                            img.img-responsive(src='3166_dd48_960.jpeg')
+                            .text-on-img
+                                p Bakemonogatary
+                                small Chap 20
+        // Advertisment
+        .mh-second-inner-advertisment.col-sm-2.hidden-xs
+            .col-sm-12.col-xs-12(style='padding: 0')
+                img.img-responsive(src='advertisment2.png', alt='Advertisment 2')
+            .col-sm-12.col-xs-12(style='padding: 0; display: block; min-height: 50px; background-color: black')
+                .col-sm-12.col-xs-12(style='display: flex;')
+                    div(style='flex: 1')
+                        img.img-responsive(src='logopage.png')
+                    div(style='flex: 2; padding-left: 5%')
+                        h3 MangaHub
