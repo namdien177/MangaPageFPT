@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    title MangaHub
+    meta(name='viewport', content='width=device-width')
+    // Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    // jQuery library
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    // Latest compiled JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    // CSS sheets
+    link(href='/stylesheets/style.css', rel='stylesheet')
+  body
+      nav.navbar.navbar-default
+          .container-fluid
+              .navbar-header
+                  button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navibar')
+                      span.icon-bar
+                      span.icon-bar
+                      span.icon-bar
+                  a.navbar-brand(href='#') MangaHub
+              #navibar.collapse.navbar-collapse
+                  ul.nav.navbar-nav
+                      li.active
+                          a(href='#') Home
+                      li
+                          a(href='#') Category
+                      li
+                          a(href='#') Author
+                      li
+                          a(href='#') Translate Team
+                  form.navbar-form.navbar-left
+                      .input-group
+                          input.form-control(type='text', style='min-width: 25vw', placeholder='Search manga name, author, translate team, ...')
+                          .input-group-btn
+                              button.btn.btn-default(type='submit')
+                                  i.glyphicon.glyphicon-search
+                  ul.nav.navbar-nav.navbar-right
+                      li
+                          a(href='login.html')
+                              span.glyphicon.glyphicon-user
+                              |  Sign Up
+                      li
+                          a(href='login.html')
+                              span.glyphicon.glyphicon-log-in
+                              |  Login
+
+      block content
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    script(src='/public/javascripts/jvs.js')
