@@ -231,17 +231,6 @@ div.text-on-img {
   text-align: center;
   padding: 5px 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
 @media all and (min-width: 992px) {
   .carousel-move .carousel-inner > .active.left,
   .carousel-move .carousel-inner > .prev {
