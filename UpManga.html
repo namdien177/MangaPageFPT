@@ -52,8 +52,24 @@
             </div>
         </div>
     </nav>
+    <div class="col-md-3 col-xs-12" style="display: flex;">
+    	<ul class="nav navbar-nav">
+						
+						<li class="active col-md-12" style="clear: right;float: lef"><a href="" title="" style="color: red">Thêm truyện</a></li>
 
-    <div class="col-md-8 col-xs-12">
+						<li class="col-md-12" style="clear: right"><a href="" title="" style="color: red; clear: right" class="dropdown-toggle" data-toggle="dropdown">Edit truyện
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="" title=""></a>Sửa chương</li>
+								<li><a href="" title=""></a>Sửa phụ họa</li>
+							</ul>
+						</li>
+
+						<li class="col-md-12" style="clear: right"><a href="" title="" style="color: red">PC</a></li>
+		</ul>
+    </div>
+
+    <div class="col-md-7 col-xs-12">
     <h1 style="color: red"> Update manga</h1>
     <hr>
     	<form>
@@ -74,7 +90,7 @@
 			</div>
 
 			<div style="margin-top: 10px">
-				<p style="color: red; margin-top: 13px; margin-right: : 1	5px "; class="col-md-2">Bìa truyện<span class="text-danger"> (*)</span></p>
+				<p style="color: red; margin-top: 13px; margin-right: : 15px "; class="col-md-2">Bìa truyện<span class="text-danger"> (*)</span></p>
                 <button class="btn btn-success col-md-4" type="submit" value="Bìa truyện" style="margin-top: 10px; border-radius: 5px; color: #F20C1C; background-color: #EEBB09; margin-right:10px; margin-bottom: 40px"><i class="glyphicon glyphicon-plus"></i> Upload bìa truyện</button>
 			</div>
 
@@ -96,6 +112,11 @@
 			<div style="margin-top: 10px">
 				<p style="color: red">Tóm tắt truyện<span class="text-danger"> (*)</span></p>
                 <input id="tóm tắt" type="text" class="form-control" name ="tóm tắt" placeholder="Tóm tắt Nội dung " required">
+			</div>
+
+			<div style="margin-top: 10px">
+				<p style="color: red">Tên khác của truyện</p>
+                <input id="Tên khác" type="text" class="form-control" name ="tên khác" placeholder="Tên khác để search truyện dễ hơn">
 			</div>
 
 			<div style="margin-top: 10px">
