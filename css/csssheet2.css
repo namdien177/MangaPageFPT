@@ -18,6 +18,10 @@ nav.navbar{
 	color: #202E2E;
 }
 
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
 .abspadd{
   padding: 0px;
 }
@@ -135,7 +139,7 @@ nav.navbar{
 }
 
 .mh-second-inner-advertisment{
-
+  padding: 0px;
 }
 
 .mh-second-inner-topmanga-header{
@@ -212,8 +216,11 @@ nav.navbar{
 div.polaroid {
   background-color: white;
   padding: 0px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
+}
+
+div.polaroid:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 div.polaroid > img {
@@ -290,11 +297,13 @@ div.text-on-img {
 /*--affiliate assets-*/
 
 .myButt {
+  margin-left: 0px;
   outline: none;
   border: none;
   display: block;
   cursor: pointer;
   font-size: 20px;
+  border: 2px solid #fff;
   background-color: transparent;
   position: relative;
   transition: all 0.5s ease;
@@ -307,12 +316,16 @@ div.text-on-img {
 }
 
 .one {
+    padding: 0;
+   margin: 0;
   border-color: #fff;
   overflow: hidden;
   color: #fff;
 }
 
 .one:hover {
+    padding: 0;
+   margin: 0;
   background-color: #F44336;
   border-color: #fff;
   color: #fff;
@@ -320,17 +333,19 @@ div.text-on-img {
 .myButt.slideUp {
     margin-top: 0px;  
     height:0px;
+    border: none;
 }
 .team{
-  margin-left: 4%;
+    margin-left: 4%;
     margin-top: 50px;
-    border: 2px solid #fff;
+    
     margin-right: 4%;
 }
 .team .translator{
   margin-right: 0%;
 }
 .form-hide{
+
   margin-bottom: 0px;  
     height:0px;
 }
