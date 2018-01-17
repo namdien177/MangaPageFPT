@@ -274,7 +274,9 @@ div.text-on-img {
 }
 .carousel-move .cloneditem-1,
 .carousel-move .cloneditem-2,
-.carousel-move .cloneditem-3, {
+.carousel-move .cloneditem-3,
+.carousel-move .cloneditem-4,
+.carousel-move .cloneditem-5, {
   display: none;
 }
 .carousel-move .carousel-control {

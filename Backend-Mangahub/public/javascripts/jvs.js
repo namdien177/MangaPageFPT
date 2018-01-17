@@ -1,5 +1,4 @@
 (function(){
-    $('#updateslide').carousel({ interval: false });
 
     $('.carousel-move .item').each(function(){
         var itemToClone = $(this);
