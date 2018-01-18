@@ -22,12 +22,9 @@ app.post('/gek', (req, res) => {
     })
 });
 // view engine setup
-<<<<<<< HEAD
 app.set('views','./views');
-=======
 //app.set('views', path.join(__dirname, 'views'));      //this way might works for some people.
 app.set('views', './views');
->>>>>>> a2ceac6798b8480e28c2eaa7f9a8c670c5b1df62
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
