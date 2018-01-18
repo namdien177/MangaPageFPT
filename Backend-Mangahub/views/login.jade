@@ -2,7 +2,7 @@ extends layout
 
 block content
     //example section displaying error
-    if (errors)
+    if (errors || !success)
         // this needs to have css class
         .error-bag
             ul

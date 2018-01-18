@@ -35,9 +35,9 @@ html
                           a(href='#') Author
                       li
                           a(href='#') Translate Team
-                  form.navbar-form.navbar-left
+                  form.navbar-form.navbar-left(action='/search', method='get')
                       .input-group
-                          input.form-control(type='text', style='min-width: 25vw', placeholder='Search manga name, author, translate team, ...')
+                          input.form-control(type='text', style='min-width: 25vw', name='keyword', placeholder='Search manga name, author, translate team, ...')
                           .input-group-btn
                               button.btn.btn-default(type='submit')
                                   i.glyphicon.glyphicon-search
@@ -52,6 +52,6 @@ html
                               |  Login
 
       block content
-    script(type='text/javascript',src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
-    script(type='text/javascript',src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
-    script(type='text/javascript',src='/javascripts/jvs.js')
+    script(type='text/javascript', src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    script(type='text/javascript', src='/javascripts/jvs.js')

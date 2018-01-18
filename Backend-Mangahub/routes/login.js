@@ -1,10 +1,6 @@
 var express = require('express');
 var router = express.Router();
 //<<<<<<< HEAD
-//var app = express();
-//let db = require('../DatabaseComps/DataConnection');        //      import database class
-//=======
-//let db = require('../DatabaseComps/DataConnection');        //      import database class
 //>>>>>>> f35cc22f66676e9a124b6200f802bcd4ffb042f3
 
 /* GET Login page */
@@ -12,20 +8,12 @@ var router = express.Router();
  * Trang mặc định được gọi.
  */
 router.get('/', function(req, res, next) {
-    res.render('login', {success: false, errors: req.session.error});
+    res.render('login', {success: req.session.loginauth, errors: req.session.error});
     req.session.error = null;
 });
 
 
 /* POST Login page */
-/**
- * TODO: Viết lại hàm này phù hợp với mã hóa của Mạnh.
- * @param req
- * @param res
- * @param next
- */
-
-
 /**
  * Post for login form. Lấy function từ trên.
  * TODO: Thiết kế trang login với biến: title, loginstatus, errormessage.
@@ -38,8 +26,11 @@ router.post('/', function (req, res, next) {
 
     var allerror = req.validationErrors();
     console.log('List error if has? - > '+allerror);
+
+    // redirect depends on validation
     if (allerror){
         req.session.error = allerror;
+        req.session.loginauth = false;
         console.log('Got error');
         res.redirect('/login');
     }else {
@@ -48,13 +39,14 @@ router.post('/', function (req, res, next) {
         var password = req.body.password;
         /*var errorAuth = db.checkLogin(username, password);
         if (errorAuth){
-            req.session.error = 'Username or Password is incorrect!';
+            req.session.error = {'msg':'Username or Password is incorrect!'};
             res.redirect('/');
         }
         else {
             res.redirect('./');
         }*/
         console.log('no error');
+        req.session.loginauth = true;
         req.session.error = allerror;
         res.redirect('./');
     }
