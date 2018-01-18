@@ -1,14 +1,10 @@
-const mysql = require('mysql-model');
+const mongoose = require('mongoose');
 const validator = require('validator');
+//https://www.npmjs.com/package/validator
+const jwt = require('jsonwebtoken');
 const _ = require('lodash');
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "manhdaik",
-    database: "mangahub"
-});
 
-var User = new con.extend({
+var UserSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
@@ -22,8 +18,8 @@ var User = new con.extend({
     },
     password: {
         type: String,
-        require: true,
-        minlength: 6
+        required: true,
+        minlength: 6,
     },
     tokens: [{
         access: {
@@ -36,4 +32,5 @@ var User = new con.extend({
         }
     }]
 });
+var User = mongoose.model('User', UserSchema);
 module.exports ={User};
