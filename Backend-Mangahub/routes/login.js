@@ -30,18 +30,18 @@ router.get('/', function(req, res, next) {
  * Post for login form. Lấy function từ trên.
  * TODO: Thiết kế trang login với biến: title, loginstatus, errormessage.
  */
-router.post('/login', function (req, res, next) {
+router.post('/', function (req, res, next) {
     console.log('begin checking')
     //  Check validation
     req.check('username', 'Your username is not in form of an email!').isEmail();
     req.check('password', 'Hey! Your password should have 6 - 20 character?.').isLength({min:6, max:20});
 
     var allerror = req.validationErrors();
-    console.log(allerror);
+    console.log('List error if has? - > '+allerror);
     if (allerror){
         req.session.error = allerror;
         console.log('Got error');
-        res.redirect('/');
+        res.redirect('/login');
     }else {
         //checking on serverside
         var username = req.body.username;
@@ -55,6 +55,7 @@ router.post('/login', function (req, res, next) {
             res.redirect('./');
         }*/
         console.log('no error');
+        req.session.error = allerror;
         res.redirect('./');
     }
 });
