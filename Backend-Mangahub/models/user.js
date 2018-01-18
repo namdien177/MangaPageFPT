@@ -4,12 +4,13 @@ const validator = require('validator');
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
 
+mongoose.connect('mongodb://localhost:27017/MangaHub');
+
 var UserSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
         trim: true,
-        minlength: 1,
         unique: true,
         validate: {
             validator: validator.isEmail,
@@ -19,7 +20,7 @@ var UserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        minlength: 6,
+        minLength:6,
     },
     tokens: [{
         access: {
@@ -32,5 +33,4 @@ var UserSchema = new mongoose.Schema({
         }
     }]
 });
-var User = mongoose.model('User', UserSchema);
-module.exports ={User};
+const User = module.exports = mongoose.model('User',UserSchema);
