@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-let db = require('../DatabaseComps/DataConnection');        //      import database class
+//let db = require('../DatabaseComps/DataConnection');        //      import database class
 
 /* GET Login page */
 /**
@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
  * @param next
  */
 function loginFunct(req, res, next) {
-    //receive information
+    /*receive information
     let username = req.body.username;
     let password = req.body.password;
     let saveuser = req.body.rememberme;
@@ -41,7 +41,7 @@ function loginFunct(req, res, next) {
                     'you entered wrong username/password. Please try again.'}); //return login page with error message
             }
         }
-    });
+    });*/
 }
 
 /**
