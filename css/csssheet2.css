@@ -286,3 +286,79 @@ div.text-on-img {
   width: 4%;
   background-image: none;
 }
+.breadcrumb{
+  padding: 10px 16px;
+  width: 100%;
+  height: 40px;
+  color: #5A6C6F;
+  font: bold;
+
+}
+.seperator{
+  color:#857C7C;
+  font: bold;
+}
+.home {
+  font-size: medium;
+  color:#686BE9;
+}
+.option-read{
+  padding:10px 17px;
+  width: 100%;
+  height:50px;
+  background-color: #AB9F9F ;
+
+}
+.select-chapter{
+  border: 1px;
+  float: left;
+  border-color: #5044EC;
+  width: 450px;
+  height: 35px;
+}
+.btn-click{
+  background: #FFFFFF;
+  border-radius: 5px;
+padding: 7px 10px;
+}
+.clear{
+  clear: both;
+}
+
+h2 {
+  float: left;
+  margin-top:  5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+font-style: normal;
+font-size: 25px;
+font-weight: 100;
+color: red;
+}
+input[name=report-error]{
+    background-color:  #ECAA0D;
+    color: white;
+    height: 35px;
+    width: 80px;
+    padding: auto;
+    margin-left: 10px;
+    float: left;
+  border-radius: 5px;
+}
+.container{
+width: 100%;
+padding: 0px;
+}
+#content{
+  overflow: auto;
+  width: 1000px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#cmt-section{
+  width: 1000px;
+  height: 500px;
+  overflow: auto;
+color:#FFFFFF;
+}
