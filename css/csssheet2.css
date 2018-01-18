@@ -439,3 +439,20 @@ color:#FFFFFF;
 
 /*--end affiliate assets-*/
 >>>>>>> 0122804f9804a1bff09355d78e7e1bb6c6d65b84
+
+
+
+
+
+/* ETC (error message) */
+
+.error-body{
+  font-family: 'Raleway', sans-serif;
+  background-color: #202E2E;
+  color: #636b6f;
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
