@@ -13,9 +13,31 @@ body>div{
 nav.navbar{
 	padding: 0px;
 	margin: 0px;
-	background-color: #BFFCFC;
+	background-color: #f0ad4e;
 	border-radius: 0px;
-	color: #202E2E;
+	color: white;
+}
+
+/* Title */
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: white;
+}
+
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 .abspadd{
@@ -39,11 +61,13 @@ nav.navbar{
 .mh-inner-author-suggest{
 	display: inline-block;
 	padding: 0px;
-	background-color: grey;
+	background-color: white;
+  color:black;
 }
 
 .mh-inner-author{
 	padding: 0px;
+  background-color: transparent;
   display: inline-block;
 }
 
@@ -88,15 +112,14 @@ nav.navbar{
 	-webkit-line-clamp: 4; /* number of lines to show */
 	-webkit-box-orient: vertical;
 	text-align:justify;
-	height: 5vw;
 }
 
 .overlay {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: #008CBA;
-  opacity: 0.3;
+  background-color: #f0ad4e;
+  opacity: 0.7;
   overflow: hidden;
   width: 0;
   height: 100%;
@@ -135,7 +158,7 @@ nav.navbar{
 }
 
 .mh-second-inner-advertisment{
-
+  padding: 0px;
 }
 
 .mh-second-inner-topmanga-header{
@@ -206,14 +229,16 @@ nav.navbar{
 .top-manga-right{
   flex: 2;
   display: flex;
-  display: 
 }
 
 div.polaroid {
   background-color: white;
   padding: 0px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
+}
+
+div.polaroid:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 div.polaroid > img {
@@ -222,19 +247,8 @@ div.polaroid > img {
 
 div.text-on-img {
   text-align: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
 @media all and (min-width: 992px) {
   .carousel-move .carousel-inner > .active.left,
   .carousel-move .carousel-inner > .prev {
@@ -279,13 +293,16 @@ div.text-on-img {
 }
 .carousel-move .cloneditem-1,
 .carousel-move .cloneditem-2,
-.carousel-move .cloneditem-3, {
+.carousel-move .cloneditem-3,
+.carousel-move .cloneditem-4,
+.carousel-move .cloneditem-5, {
   display: none;
 }
 .carousel-move .carousel-control {
   width: 4%;
   background-image: none;
 }
+<<<<<<< HEAD
 .breadcrumb{
   padding: 10px 16px;
   width: 100%;
@@ -362,3 +379,63 @@ padding: 0px;
   overflow: auto;
 color:#FFFFFF;
 }
+=======
+
+/*--affiliate assets-*/
+
+.myButt {
+  margin-left: 0px;
+  outline: none;
+  border: none;
+  display: block;
+  cursor: pointer;
+  font-size: 20px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  width: 100%;
+  height: 500px
+}
+
+.one {
+    padding: 0;
+   margin: 0;
+  border-color: #fff;
+  overflow: hidden;
+  color: #fff;
+}
+
+.one:hover {
+    padding: 0;
+   margin: 0;
+  background-color: #F44336;
+  border-color: #fff;
+  color: #fff;
+}
+.myButt.slideUp {
+    margin-top: 0px;  
+    height:0px;
+    border: none;
+}
+.team{
+    margin-left: 4%;
+    margin-top: 50px;
+    
+    margin-right: 4%;
+}
+.team .translator{
+  margin-right: 0%;
+}
+.form-hide{
+
+  margin-bottom: 0px;  
+    height:0px;
+}
+
+/*--end affiliate assets-*/
+>>>>>>> 0122804f9804a1bff09355d78e7e1bb6c6d65b84
