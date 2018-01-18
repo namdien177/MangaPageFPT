@@ -1,19 +1,28 @@
 var express = require('express');
+const _ = require('lodash');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-
+var {User} = require('./models/user');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var login = require('./routes/login');
-
 var app = express();
+app.post('/gek', (req, res) => {
+    var body = _.pick(req.body, ['email', 'password']);
+    var user = new User(body);
 
+    user.save().then((user) => {
+        res.send(user);
+    }).catch((e) => {
+        res.status(400).send(e);
+    })
+});
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views','./views');
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
@@ -47,5 +56,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;

@@ -37,6 +37,17 @@ function loginFunct(req, res, next) {
 }
 
 router.post('/logged-in', loginFunct);
+// POST /users
+router.post('/users', (req, res) => {
+    var body = _.pick(req.body, ['email', 'password']);
+    var user = new User(body);
+
+    user.save().then((user) => {
+        res.send(user);
+    }).catch((e) => {
+        res.status(400).send(e);
+    })
+});
 
 
 module.exports = router;
