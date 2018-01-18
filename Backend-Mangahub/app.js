@@ -35,7 +35,7 @@ app.use(session({secret:'max', saveUninitialized:false, resave:false}));
 app.use('/', index);            //homepage
 app.use('/login', login);       //login page
 app.use('/user', users);        //profile page
-app.use('/search', search)      //search page
+app.use('/search', search);      //search page
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

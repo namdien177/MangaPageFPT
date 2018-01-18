@@ -1,13 +1,5 @@
 var express = require('express');
 var router = express.Router();
-<<<<<<< HEAD
-var app = express();
-
-//let db = require('../DatabaseComps/DataConnection');        //      import database class
-=======
-//<<<<<<< HEAD
-//>>>>>>> f35cc22f66676e9a124b6200f802bcd4ffb042f3
->>>>>>> 7f6f192ab4d25ce3fd36f4b8f4b69627aa83bf69
 
 /* GET Login page */
 /**
@@ -25,7 +17,7 @@ router.get('/', function(req, res, next) {
  * TODO: Thiết kế trang login với biến: title, loginstatus, errormessage.
  */
 router.post('/', function (req, res, next) {
-    console.log('begin checking')
+    console.log('begin checking');
     //  Check validation
     req.check('username', 'Your username is not in form of an email!').isEmail();
     req.check('password', 'Hey! Your password should have 6 - 20 character?.').isLength({min:6, max:20});
