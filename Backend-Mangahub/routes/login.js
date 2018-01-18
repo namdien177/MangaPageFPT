@@ -1,11 +1,8 @@
 var express = require('express');
 var router = express.Router();
-<<<<<<< HEAD
 var app = express();
-let db = require('../DatabaseComps/DataConnection');        //      import database class
-=======
+
 //let db = require('../DatabaseComps/DataConnection');        //      import database class
->>>>>>> f35cc22f66676e9a124b6200f802bcd4ffb042f3
 
 /* GET Login page */
 /**
