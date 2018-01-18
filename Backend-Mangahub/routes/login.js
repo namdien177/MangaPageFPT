@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
+<<<<<<< HEAD
+var app = express();
+let db = require('../DatabaseComps/DataConnection');        //      import database class
+=======
 //let db = require('../DatabaseComps/DataConnection');        //      import database class
+>>>>>>> f35cc22f66676e9a124b6200f802bcd4ffb042f3
 
 /* GET Login page */
 /**
@@ -28,17 +33,6 @@ function loginFunct(req, res, next) {
  * TODO: Thiết kế trang login với biến: title, loginstatus, errormessage.
  */
 router.post('/logged-in', loginFunct);
-// POST /users
-router.post('/users', (req, res) => {
-    var body = _.pick(req.body, ['email', 'password']);
-    var user = new User(body);
-
-    user.save().then((user) => {
-        res.send(user);
-    }).catch((e) => {
-        res.status(400).send(e);
-    })
-});
 
 
 module.exports = router;
