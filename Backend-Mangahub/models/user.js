@@ -3,7 +3,7 @@ const validator = require('validator');
 //https://www.npmjs.com/package/validator
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
 mongoose.connect('mongodb://localhost:27017/MangaHub');
 var UserSchema = new mongoose.Schema({
     truename:{
@@ -68,10 +68,9 @@ UserSchema.methods.generateAuthToken = function(password){
         access,token
     });
     return user.save().then(() => {
-
+        console.log('save token');
         return token;
     });
-
 };
 UserSchema.statics.findByToken = function (token) {
     var User = this;
@@ -105,7 +104,27 @@ UserSchema.pre('save',function(next){
         next();
     }
 });
+UserSchema.statics.findByCredentials = function(email,password){
+    var User = this;
+    return User.findOne({email}).then((user)=>{
+        if(!user){
+            console.log('email is not found');
+            return Promise.reject();
+        }
+        return new Promise((resolve,reject)=>{
+            bcrypt.compare(password,user.password,(err,res)=>{
+                if(res){
+                    console.log('user and password correct');
+                    resolve(user);
+                }else{
+                    console.log('user and password is not correct');
+                    reject();
+                }
+            });
+        })
+    })
 
+};
 var User = mongoose.model('User', UserSchema);
 
 module.exports = {User};

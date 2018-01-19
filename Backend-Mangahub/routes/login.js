@@ -1,7 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const _ = require('lodash');
 var login = require('./login');
-var auth = require('../middleware/authenticate');
+const mongoose = require('mongoose');
+var {User} = require('../models/user');
+
 /* GET Login page */
 /**
  * Trang mặc định được gọi.
@@ -20,7 +23,7 @@ router.get('/', function(req, res, next) {
  * TODO: Thiết kế trang login với biến: title, loginstatus, errormessage.
  */
 router.post('/', function (req, res, next) {
-    console.log('begin checking');
+    console.log(req.body.username);
     //  Check validation
     req.check('username', 'Your username is not in form of an email!').isEmail();
     req.check('password', 'Hey! Your password should have 6 - 20 character?.').isLength({min:6, max:20});
@@ -51,6 +54,19 @@ router.post('/', function (req, res, next) {
         req.session.error = allerror;
         res.redirect('./');
     }
+});
+
+//Post Login Remake
+
+router.post('/login',(req,res)=>{
+    var body = _.pick(req.body, ['email', 'password']);
+    User.findByCredentials(body.email,body.password).then((user)=>{
+        return user.generateAuthToken(body.password).then((token)=>{
+            res.header('x-auth', token).send(user);
+        });
+    }).catch((e)=>{
+        res.status(400).send();
+    });
 });
 
 

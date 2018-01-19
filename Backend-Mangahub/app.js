@@ -4,7 +4,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 var session = require('express-session');
 var eValidatior = require('express-validator');
 
@@ -41,7 +41,6 @@ app.use('/search', search);             //search page
 app.use('/register',register);          //register page
 app.use('/create-manga',create_manga);  //create manga page
 app.use('/update-manga',update_manga);  //update manga page
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
