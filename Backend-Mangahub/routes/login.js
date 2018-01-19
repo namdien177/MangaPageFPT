@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var login = require('./login');
+var auth = require('./middleware');
+var
 /* GET Login page */
 /**
  * Trang mặc định được gọi.
