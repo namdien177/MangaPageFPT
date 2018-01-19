@@ -7,26 +7,16 @@ let {User} = require('../models/user');
 var {authenticate} = require('../middleware/authenticate');
 //Register Form
 router.post('/register', (req, res) => {
-
-    var body = _.pick(req.body, ['email', 'password']);
-    var user = new User(body);
-
-    user.save().then(() => {
-        return user.generateAuthToken();
-    }).then((token) => {
-
-        res.header('x-auth', token).send(user);
-    }).catch((e) => {
-        res.status(400).send(e);
-    })
+    res.redirect('./register');
 });
+
 router.get('/', (req, res) => {
-    res.render('login');
+    res.redirect('./users/me');
 });
 
 router.get('/users/me', authenticate, (req, res) => {
-    console.log('get inside')
-    res.send(req.user);
+    if (req.session.login) res.send(req.user);
+    else res.redirect('./login');
 });
 
 module.exports = router;

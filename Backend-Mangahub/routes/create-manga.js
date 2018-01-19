@@ -3,16 +3,12 @@ const router = express.Router();
 const _ = require('lodash');
 const mongoose = require('mongoose');
 //User Model
-let {User} = require('../models/user');
+let {Manga} = require('../models/manga');
 var {authenticate} = require('../middleware/authenticate');
 
 /* GET register. */
 router.get('/', function getHome(req, res, next) {
-    if (req.session.login){
-        res.redirect('./users/me');
-    }else {
-        res.render('register', { title: 'MangaHub - Register', errors: req.session.error });
-    }
+    res.render('create-manga',{title: 'Create'})
 });
 
 /* POST register*/

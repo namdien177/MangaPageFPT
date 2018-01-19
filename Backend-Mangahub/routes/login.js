@@ -1,15 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var login = require('./login');
-var auth = require('./middleware');
-var
+var auth = require('../middleware/authenticate');
 /* GET Login page */
 /**
  * Trang mặc định được gọi.
  */
+
+
 router.get('/', function(req, res, next) {
-    console.log('ok then');
-    res.render('login');
+    res.render('login',{status: req.session.login, errors: req.session.error});
+    req.session.error = null;
 });
 
 
@@ -30,7 +31,7 @@ router.post('/', function (req, res, next) {
     // redirect depends on validation
     if (allerror){
         req.session.error = allerror;
-        req.session.loginauth = false;
+        req.session.login = false;
         console.log('Got error');
         res.redirect('/login');
     }else {
@@ -46,7 +47,7 @@ router.post('/', function (req, res, next) {
             res.redirect('./');
         }*/
         console.log('no error');
-        req.session.loginauth = true;
+        req.session.login = true;
         req.session.error = allerror;
         res.redirect('./');
     }

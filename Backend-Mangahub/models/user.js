@@ -6,6 +6,18 @@ const _ = require('lodash');
 
 mongoose.connect('mongodb://localhost:27017/MangaHub');
 var UserSchema = new mongoose.Schema({
+    truename:{
+        type: String,
+        required: true,
+        trim:true,
+    },
+    dob:{
+        type:Date,
+        required:true,
+    },
+    gender:{
+        type: String,
+    },
     email: {
         type: String,
         required: true,
@@ -21,16 +33,22 @@ var UserSchema = new mongoose.Schema({
         required: true,
         minLength:6,
     },
+    group:{                    //Free member / Author / Translate Team
+        type: String,
+    },
+    membership:{                    // subscriber
+        type: String,
+    },
     tokens: [{
         access: {
             type: String,
-        required: true
+            required: true
         },
         token: {
-        type: String,
+            type: String,
             required: true
-    }
-}]
+        }
+    }]
 });
 //TODO: Return the id and email before hash
 UserSchema.methods.toJSON = function () {
@@ -40,11 +58,11 @@ UserSchema.methods.toJSON = function () {
     return _.pick(userObject, ['_id', 'email']);
 };
 
-UserSchema.methods.generateAuthToken = function(){
+UserSchema.methods.generateAuthToken = function(password){
 
     var user = this;
     var access ='auth';
-    var token = jwt.sign({_id:user._id.toHexString(),access},'abc123').toString();
+    var token = jwt.sign({_id:user._id.toHexString(),access},password).toString();
 
     user.tokens.push({
         access,token
