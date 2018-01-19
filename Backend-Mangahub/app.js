@@ -14,9 +14,9 @@ var login = require('./routes/login');
 let users = require('./routes/users');
 var search = require('./routes/search');
 var app = express();
+
 // view engine setup
 
-app.set('views','./views');
 //app.set('views', path.join(__dirname, 'views'));      //this way might works for some people.
 app.set('views', './views');
 app.set('view engine', 'jade');

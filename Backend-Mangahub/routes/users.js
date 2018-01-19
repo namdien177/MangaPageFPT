@@ -20,6 +20,9 @@ router.post('/register', (req, res) => {
         res.status(400).send(e);
     })
 });
+router.get('/', (req, res) => {
+    res.render('login');
+});
 
 router.get('/users/me', authenticate, (req, res) => {
     console.log('get inside')

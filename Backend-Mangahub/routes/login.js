@@ -6,8 +6,7 @@ var router = express.Router();
  * Trang mặc định được gọi.
  */
 router.get('/', function(req, res, next) {
-    res.render('login', {success: req.session.loginauth, errors: req.session.error});
-    req.session.error = null;
+    res.render('login');
 });
 
 
