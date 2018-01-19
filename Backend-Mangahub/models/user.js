@@ -3,7 +3,7 @@ const validator = require('validator');
 //https://www.npmjs.com/package/validator
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
-
+const bcrypt = require('bcryptjs')
 mongoose.connect('mongodb://localhost:27017/MangaHub');
 var UserSchema = new mongoose.Schema({
     truename:{
@@ -89,7 +89,22 @@ UserSchema.statics.findByToken = function (token) {
         'tokens.access': 'auth'
     });
 };
+//TODO: Hàm middleware pre sẽ được thực hiện trước khi dùng lệnh save().
+UserSchema.pre('save',function(next){
+    var user =this;
 
+    if(user.isModified('password')){
+        console.log('go');
+        bcrypt.genSalt(10,(err,salt)=>{
+            bcrypt.hash(user.password,salt,(err,hash)=>{
+                user.password = hash;
+                next();
+            });
+        });
+    }else{
+        next();
+    }
+});
 
 var User = mongoose.model('User', UserSchema);
 
