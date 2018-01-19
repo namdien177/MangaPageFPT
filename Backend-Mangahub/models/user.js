@@ -24,13 +24,13 @@ var UserSchema = new mongoose.Schema({
     tokens: [{
         access: {
             type: String,
-            required: true
+        required: true
         },
         token: {
-            type: String,
+        type: String,
             required: true
-        }
-    }]
+    }
+}]
 });
 //TODO: Return the id and email before hash
 UserSchema.methods.toJSON = function () {

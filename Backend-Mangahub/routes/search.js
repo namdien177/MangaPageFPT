@@ -5,6 +5,7 @@ var cm = require('../CustomizedModule');                       //  import custom
 
 /* GET search. */
 router.get('/', function getHome(req, res, next) {
+    console.log('log');
     res.render('search', { title: 'MangaHub - Find' });
 });
 

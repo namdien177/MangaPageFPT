@@ -2,12 +2,6 @@ extends layout
 
 block content
     //example section displaying error
-    if (errors || !success)
-        // this needs to have css class
-        .error-bag
-            ul
-                for error in errors
-                    li= error.msg
 
     form(action='/login', method='post')
         input(type='text', name='username', placeholder='Enter your Email here.')
