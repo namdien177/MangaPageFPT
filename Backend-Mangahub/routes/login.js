@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
-
+var login = require('./login');
 /* GET Login page */
 /**
  * Trang mặc định được gọi.
  */
 router.get('/', function(req, res, next) {
+    console.log('ok then');
     res.render('login');
 });
 
