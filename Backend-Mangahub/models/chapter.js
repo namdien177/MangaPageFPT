@@ -11,7 +11,7 @@ var ChapterSchema = new mongoose.Schema({
         required: true,
         trim:true,
     },
-    chapterDesc:{
+    chapterDesc:{           // bake chap4?
         type: String,
         required: true,
     },

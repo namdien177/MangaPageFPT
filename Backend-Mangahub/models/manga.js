@@ -37,15 +37,30 @@ var MangaSchema = new mongoose.Schema({
     },
     view:{
         type: Number,
+        default:0,
         min: 0,
     },
     subscribe:{
         type: Number,
+        default:0,
         min: 0,
     },
-    react:{
+    react: [{
+        dislike: {
+            type: Number,
+            default:0,
+            min:0,
+        },
+        like: {
+            type: Number,
+            default:0,
+            min:0,
+        }
+    }],
+    status:{
         type: Boolean,
-    }
+        default: false,
+    },
 });
 
 
