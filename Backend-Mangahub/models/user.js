@@ -104,21 +104,23 @@ UserSchema.pre('save',function(next){
         next();
     }
 });
+
+//login by email and password
 UserSchema.statics.findByCredentials = function(email,password){
     var User = this;
-    return User.findOne({email}).then((user)=>{
+    return User.findOne({email}).then((user)=>{         //find user on database -> return user
         if(!user){
             console.log('email is not found');
-            return Promise.reject();
+            return Promise.reject('email is not found');                    //not match case -> reject
         }
-        return new Promise((resolve,reject)=>{
+        return new Promise((resolve,reject)=>{              //found on server -> compare bcrypt
             bcrypt.compare(password,user.password,(err,res)=>{
                 if(res){
                     console.log('user and password correct');
-                    resolve(user);
+                    resolve(user);                          //return user if correct -> resolve(found user)
                 }else{
                     console.log('user and password is not correct');
-                    reject();
+                    reject('user or password is not correct');
                 }
             });
         })

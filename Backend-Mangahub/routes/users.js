@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     res.redirect('./users/me');
 });
 
-router.get('/users/me', authenticate, (req, res) => {
+router.get('/me', authenticate, (req, res) => {
     if (req.session.login) res.send(req.user);
     else res.redirect('./login');
 });

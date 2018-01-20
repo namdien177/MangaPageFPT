@@ -31,7 +31,7 @@ router.post('/', function (req, res, next) {
     var allerror = req.validationErrors();
     console.log('List error if has? - > '+allerror);
 
-    // redirect depends on validation
+    // redirect depends on pre-validation
     if (allerror){
         req.session.error = allerror;
         req.session.login = false;
@@ -41,18 +41,21 @@ router.post('/', function (req, res, next) {
         //checking on serverside
         var username = req.body.username;
         var password = req.body.password;
-        /*var errorAuth = db.checkLogin(username, password);
-        if (errorAuth){
-            req.session.error = {'msg':'Username or Password is incorrect!'};
-            res.redirect('/');
-        }
-        else {
+
+        User.findByCredentials(username,password).then((user)=>{
+            console.log('logged in -> saving token to session');
+            req.session.token = user.tokens.token;
+            console.log(user.tokens.token);
+            req.session.login = true;
+            req.session.error = allerror;
+            console.log('no error');
             res.redirect('./');
-        }*/
-        console.log('no error');
-        req.session.login = true;
-        req.session.error = allerror;
-        res.redirect('./');
+        }).catch((rejectmessage)=>{
+            req.session.token = null;
+            req.session.login = false;
+            req.session.error = rejectmessage;
+            res.redirect('./login');
+        });
     }
 });
 
