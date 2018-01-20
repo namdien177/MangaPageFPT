@@ -56,17 +56,22 @@
 <div class="col-sm-12 col-xs-12 abspadd" style="display: block;padding: 1%">
 	<div class="col-sm-6 col-xs-12" style="display: inline-block;padding: 5%" id="login_form">	
 		<form method="post" action="login" style="border: 1px solid #0CC5F3; border-radius: 10px;padding: 10%" >
-            <h2 style="color: #0CC5F3;">Login</h2><br>
+            <h2 style="color: #0CC5F3;border-right: 1px solid white; padding-right: 1%">Login</h2>
+
             <hr style="">
+            <br>
 			<div style="">
                 <input id="email" type="text" class="form-control" name ="userName" placeholder="Email or userName" style="width: 100%" required>
 			</div>
-			<div style="margin-top: 10px">
+			<div style="margin-top: 1vw">
                 <input id="password" type="password" class="form-control" name ="Password" placeholder="password" style="width: 100%" required>
 			</div>
-			<input type="checkbox" name="Forgot Password" style="margin-top: 5%"><span style="color: white"> Remember me</span>
+            <div>
+                <input type="checkbox" name="Forgot Password" style="margin-top: 5%"><span style="color: white; padding-right: 1vw;padding-left: 0.5vw;border-right: 1px solid white">Remember me</span>
+                <span style="padding-left: 1vw; color: red">Your username and password does not match</span>
+            </div>
 			<hr>
-			<button class="btn btn-block login-btn" type="submit" value="login" style="">Login</button>
+			<button class="btn btn-block login-btn" type="submit" value="login" style=""><h3>Login</h3></button>
             <br>
             <a href="" style="color: #F0F8FF">Opps! I forgot my password :(</a>
 		</form>
