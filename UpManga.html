@@ -16,6 +16,7 @@
 
         <!-- CSS sheets -->
         <link rel="stylesheet" type="text/css" href="css/csssheet2.css">
+        <link rel="stylesheet" type="text/css" href="css/tag.css">
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -52,74 +53,83 @@
             </div>
         </div>
     </nav>
-    <div class="col-md-3 col-xs-12 " style="display: flex;">
-    	<ul class="nav navbar-nav">
-						
-						<li class="col-md-12" style="clear: right;float: lef"><a href="" title="" style="color: red">Thêm truyện</a></li>
 
-						<li class="col-md-12" style="clear: right"><a href="" title="" style="color: red; clear: right" class="dropdown-toggle" data-toggle="dropdown">Edit truyện
-							<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="" title="" >Sửa chương</a></li>
-								<li><a href="" title="" >Sửa phụ họa</a></li>
-							</ul>
-						</li>
 
-						<li class="col-md-12" style="clear: right"><a href="" title="" style="color: red">PC</a></li>
-		</ul>
-    </div>
+<div class="col-md-12 col-xs-12" style="display: block; padding: 3%;">
+	<div class="col-md-3 col-xs-12">
+		
+	</div>
 
-    <div class="col-md-7 col-xs-12">
-    <h1 style="color: red"> Update manga</h1>
+    <div class="col-md-6 col-xs-12 " style="display: inline-block; padding: 5%; border: 1px solid #517777; border-radius: 20px;  ">
+
+    <h1 style="color: #0CC5F3"> Update manga</h1>
     <hr>
     	<form>
     		<div>
     			
-    			<p style="color: red">Tên truyện<span class="text-danger"> (*)</span></p>
-    			<input id="Tên truyện" type="text" class="form-control" name ="tên truyện" placeholder="tên truyện" required>
+    			<p style="color: #0CC5F3">Tên truyện<span class="text-danger"> *</span></p>
+    			<input id="Tên truyện" type="text" class="form-control" name ="tên truyện" placeholder="Tên truyện" required>
     		</div>
 
     		
 
 			<div style="margin-top: 10px">
-				<p style="color: red">Notification</p>
-                <input id="Notification" type="text" class="form-control" name ="Notification" placeholder="Có thể gọi là thông báo cái gì đó :v" required">
+				<p style="color: #0CC5F3">Notification</p>
+                <input id="Notification" type="text" class="form-control" name ="Notification" placeholder="Cái tiêu đề cho hot :v" required">
 			</div>
 
 			<div style="margin-top: 10px">
-				<p style="color: red; margin-top: 13px; margin-right: : 15px "; class="col-md-2">Bìa truyện<span class="text-danger"> (*)</span></p>
-                <button class="btn btn-success col-md-4" type="submit" value="Bìa truyện" style="margin-top: 10px; border-radius: 5px; color: #F20C1C; background-color: #f0ad4e; margin-right:10px; margin-bottom: 40px"><i class="glyphicon glyphicon-plus"></i> Upload bìa truyện</button>
+				<p style="color: #0CC5F3; margin-top: 13px; margin-right: : 5px; "; class="col-md-3">Bìa truyện<span class="text-danger"> *</span></p>
+
+                <button class="btn btn-primary col-md-4" type="submit" value="Bìa truyện" style="margin-top: 10px; border-radius: 5px;   margin-right:10px; margin-bottom: 40px; margin-left: 5%"><i class="glyphicon glyphicon-plus"></i> Upload bìa truyện</button>
 			</div>
 
 			<div style="margin-top: 15px;">
-				<p style="color: red; margin-right: 25px" class="col-md-6">Tác giả  <i class="glyphicon glyphicon-question-sign"></i></p>
-                <input id="tác giả" type="text" class="form-control" name ="tác giả" placeholder="tên của tác giả">
+				<p style="color: #0CC5F3; margin-right: 25px" class="col-md-6">Tác giả  <i class="glyphicon glyphicon-question-sign"></i></p>
+                <input id="tác giả" type="text" class="form-control" name ="tác giả" placeholder="Tên của tác giả">
 			</div>
 
 			<div style="margin-top: 10px">
-				<p style="color: red">Nhóm dịch  <i class="glyphicon glyphicon-question-sign"></i></p>
-                <input id="Nhóm dịch" type="text" class="form-control" name ="Nhóm dịch" placeholder="tên của nhóm dịch">
+				<p style="color: #0CC5F3">Nhóm dịch  <i class="glyphicon glyphicon-question-sign"></i></p>
+                <input id="Nhóm dịch" type="text" class="form-control" name ="Nhóm dịch" placeholder="Tên của nhóm dịch">
 			</div>
 
 			<div style="margin-top: 10px">
-				<p style="color: red">Nguồn  <i class="glyphicon glyphicon-question-sign"></i></p>
+				<p style="color: #0CC5F3">Nguồn  <i class="glyphicon glyphicon-question-sign"></i></p>
                 <input id="Nguồn" type="text" class="form-control" name ="Nguồn" placeholder="Nguồn ở đâu">
 			</div>
 
 			<div style="margin-top: 10px">
-				<p style="color: red">Tóm tắt truyện<span class="text-danger"> (*)</span></p>
+				<p style="color: #0CC5F3">Tóm tắt truyện<span class="text-danger"> *</span></p>
                 <input id="tóm tắt" type="text" class="form-control" name ="tóm tắt" placeholder="Tóm tắt Nội dung " required">
 			</div>
 
 			<div style="margin-top: 10px">
-				<p style="color: red">Tên khác của truyện</p>
+				<p style="color: #0CC5F3">Tên khác của truyện</p>
                 <input id="Tên khác" type="text" class="form-control" name ="tên khác" placeholder="Tên khác để search truyện dễ hơn">
 			</div>
+
+			  <div class="page-content">
+    
+				<div class="container-fluid">
+				  <h2 class="content-heading">Tag Editor</h2>
+				  <div class="main-container">
+				    <div class="row">
+				      <div class="col-lg-4">
+				        <div class="tag-editor"> <!-- need wrap -->
+				          <textarea id="tag-editor" name="tags" placeholder='Write some tags'>foo, bar,buzz</textarea>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+  				</div>
 
 
 
 			<div style="margin-top: 10px">
-				<p style="color: red">Trạng Thái</p>
+				<p style="color: #0CC5F3">Trạng Thái</p>
                
                  <select name="Region" style="margin-right: 25px; width: 10vw;">
                   <option value="1">Đang tiến hành</option>
@@ -128,13 +138,13 @@
                  </select>
 			</div>
 			
-			<button class="btn btn-success col-md-4" type="submit" value="Bìa truyện" style="margin-top: 20px; border-radius: 5px; color: #F20C1C; background-color: #f0ad4e; margin-right:10px; margin-bottom: 40px">Ok</button>
+			<button class="btn btn-block btn-primary" type="submit" value="Bìa truyện" style="margin-top: 20px; border-radius: 5px;  margin-right:10px; margin-bottom: 40px">Ok</button>
 
 		
     	</form>
 	
     </div>
-	
+</div>
 
 
  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
