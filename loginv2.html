@@ -18,7 +18,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border:0px">
         <div class="container-fluid">
             <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navibar">
@@ -30,7 +30,7 @@
             </div>
             <div class="collapse navbar-collapse" id="navibar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="indexver2.html">Home</a></li>
+                    <li><a href="indexver2.html">Home</a></li>
                     <li><a href="#">Category</a></li>
                     <li><a href="#">Author</a></li>
                     <li><a href="#">Translate Team</a></li>
@@ -46,46 +46,42 @@
                     </div>
             </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-<div style="">
-	
-	<div class="col-md-5 col-xs-12" style="margin-top: 10px; border-style: solid; border-color: white; border-width: 2px;  position: absolute; float: left; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <div class="col-sm-12 col-xs-12 abspadd" style="display: block;padding: 1%">
+    	<div class="col-sm-6 col-xs-12" style="display: inline-block;padding: 5%" id="login_form">	
+    		<form method="post" action="login" style="border: 1px solid #517777; border-radius: 20px;padding: 10%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background-color: #517777" >
+                <h2 style="color: #0CC5F3;border-right: 1px solid white; padding-right: 1%">Login</h2>
 
+                <hr style="">
+                <br>
+    			<div style="">
+                    <input id="email" type="text" class="form-control" name ="userName" placeholder="Email or userName" style="width: 100%" required>
+    			</div>
+    			<div style="margin-top: 1vw">
+                    <input id="password" type="password" class="form-control" name ="Password" placeholder="password" style="width: 100%" required>
+    			</div>
+                <div>
+                    <input type="checkbox" name="Forgot Password" style="margin-top: 5%"><span style="color: white; padding-right: 1vw;padding-left: 0.5vw;border-right: 1px solid white">Remember me</span>
+                    <span style="padding-left: 1vw; color: red">Your username and password does not match</span>
+                </div>
+    			<hr>
+    			<button class="btn btn-block login-btn" type="submit" value="login" style="">Login</button>
+                <br>
+                <a href="" style="color: #F0F8FF">Opps! I forgot my password :(</a>
+    		</form>
+    	</div>
 
-			<h2 style="color: #0CC5F3; font-family: Arial;"><i>Login</i></h2><br>
-			<hr style="">
-
-			<form>
-				<div class="" style="">
-					
-	                <input id="email" type="text" class="form-control" name ="email" placeholder="Email or userName" style="width: 400px" required>
-				</div>
-				<div class="" style="margin-top: 10px">
-				
-	                <input id="password" type="password" class="form-control" name ="Password" placeholder="password" style="width: 400px" required>
-				</div>
-				
-				
-				<input type="checkbox" name="Forgot Password" style="margin-top: 5px">
-					<p style="color: white">Forgot Password ?</p>
-				
-
-				<button class="btn btn-primary" type="submit" value="login" style="margin-top: 10px; border-radius: 5px;  margin-bottom: 15vw">Login</button>
-
-			</form>
-	</div>
-
-	<div class="" style="position: absolute; float: left; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-		<button  class="btn btn-primary" type="submit" value="login" style="margin-top: 13px; border-radius: 5px; margin-right: 20vw">Register</button>
-	</div>
-
-</div>
+    	<div class="col-sm-6 col-xs-12" style="display: inline-block;padding: 5%" id="register_form">
+            <img src="register.png" style="width: 100%; height: auto;border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    		<button  class="btn btn-block btn-primary" type="submit" value="login" style="max-width: 20%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 18px;">Register</button>
+    	</div>
+    </div>
 
 </body>
 </html>

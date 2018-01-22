@@ -5,6 +5,10 @@ body{
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+a , a:hover , a:visited{
+  text-decoration: none;
+}
+
 body>div{
 	padding: 0px;
 	margin: 0px;
@@ -210,6 +214,25 @@ img:hover {
   
 }
 
+.wrap-one-row{
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align:justify;
+}
+
+.wrap-three-row{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align:justify;
+}
+
 .top-manga-desc > p{
   width: 100%;
   overflow: hidden;
@@ -402,6 +425,7 @@ max-height: 300px;
   top:0; left:0; right:0; bottom:0;
   background:#9BFB34;
 }
+<<<<<<< HEAD
 .cmt-container{
   width: 100%;
 max-height: 300px;
@@ -429,6 +453,8 @@ a:hover{
 
 =======
 
+=======
+>>>>>>> 4295f97adf5b0af203dfb9c3efcc5ffc342bedd2
 /*--affiliate assets-*/
 
 .myButt {
@@ -486,9 +512,37 @@ a:hover{
 }
 
 /*--end affiliate assets-*/
->>>>>>> 0122804f9804a1bff09355d78e7e1bb6c6d65b84
 
+.login-btn{
+  font-family: 'Raleway', sans-serif;
+  background-color: #0CC5F3;
+  color: white;
+}
 
+.login-btn:hover{
+  background-color: #0ca7ce;
+  color: white;
+}
+
+#login_form{
+    -webkit-transition: width 2s; /* Safari */
+    transition: 1s;
+    opacity: 0.5;
+}
+
+#register_form{
+    -webkit-transition: width 2s; /* Safari */
+    transition: 1s;
+    opacity: 0.5;
+}
+
+#login_form:hover{
+    opacity: 1;
+}
+
+#register_form:hover{
+    opacity: 1;
+}
 
 
 
@@ -503,4 +557,34 @@ a:hover{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.div-center-content{
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+#UpManga_form{
+    -webkit-transition: width 1s; /* Safari */
+    transition: 1s;
+    opacity: 0.5;
+}
+
+.tag-editor tags {
+    border-color: #d3d9dd;
+    border-radius: 3px;
+    padding: 5px 5px 1px 5px;
+    min-height: 79px;
+}
+
+tags {
+    display: block;
+    border: 1px solid #DDD;
+    padding-right: 0.3em 0.5em;
+    cursor: text;
+    overflow: hidden;
 }
