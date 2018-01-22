@@ -494,3 +494,25 @@ color:#FFFFFF;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+#UpManga_form{
+    -webkit-transition: width 1s; /* Safari */
+    transition: 1s;
+    opacity: 0.5;
+}
+
+.tag-editor tags {
+    border-color: #d3d9dd;
+    border-radius: 3px;
+    padding: 5px 5px 1px 5px;
+    min-height: 79px;
+}
+
+tags {
+    display: block;
+    border: 1px solid #DDD;
+    padding-right: 0.3em 0.5em;
+    cursor: text;
+    overflow: hidden;
+}
