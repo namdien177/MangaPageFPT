@@ -111,16 +111,16 @@ UserSchema.statics.findByCredentials = function(email,password){
     return User.findOne({email}).then((user)=>{         //find user on database -> return user
         if(!user){
             console.log('email is not found');
-            return Promise.reject('email is not found');                    //not match case -> reject
+            return Promise.reject('Email or password is incorrect');                    //not match case -> reject
         }
         return new Promise((resolve,reject)=>{              //found on server -> compare bcrypt
             bcrypt.compare(password,user.password,(err,res)=>{
                 if(res){
-                    console.log('user and password correct');
+                    console.log('User and password are correct');
                     resolve(user);                          //return user if correct -> resolve(found user)
                 }else{
-                    console.log('user and password is not correct');
-                    reject('user or password is not correct');
+                    console.log('User and password are incorrect');
+                    reject('Email or password is incorrect');
                 }
             });
         })

@@ -5,6 +5,10 @@ body{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+a , a:hover , a:visited{
+  text-decoration: none;
+}
+
 body>div{
   padding: 0px;
   margin: 0px;
@@ -13,9 +17,14 @@ body>div{
 nav.navbar{
   padding: 0px;
   margin: 0px;
-  background-color: #f0ad4e;
+  background-color: #0CC5F3;
   border-radius: 0px;
   color: white;
+}
+
+.login-main-div{
+  display: block;
+  padding: 5%;
 }
 
 /* Title */
@@ -38,6 +47,15 @@ nav.navbar{
 
 img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.material-shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border:0px;
+}
+
+a.material-shadow{
+  border-radius: 0;
 }
 
 .abspadd{
@@ -207,6 +225,25 @@ img:hover {
 
 }
 
+.wrap-one-row{
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align:justify;
+}
+
+.wrap-three-row{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align:justify;
+}
+
 .top-manga-desc > p{
   width: 100%;
   overflow: hidden;
@@ -249,17 +286,6 @@ div.text-on-img {
   text-align: center;
   padding: 5px 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
 @media all and (min-width: 992px) {
   .carousel-move .carousel-inner > .active.left,
   .carousel-move .carousel-inner > .prev {
@@ -304,13 +330,112 @@ div.text-on-img {
 }
 .carousel-move .cloneditem-1,
 .carousel-move .cloneditem-2,
-.carousel-move .cloneditem-3 {
-  display: block;
+.carousel-move .cloneditem-3,
+.carousel-move .cloneditem-4,
+.carousel-move .cloneditem-5 {
+  display: none;
 }
+
 .carousel-move .carousel-control {
   width: 4%;
   background-image: none;
 }
+
+.home {
+  font-size: medium;
+  color:#686BE9;
+}
+.option-read{
+  padding:10px 17px;
+  width: 100%;
+  height:50px;
+  background-color: #AB9F9F ;
+
+}
+.select-chapter{
+  border: 1px;
+  float: left;
+  border-color: #5044EC;
+  width: 450px;
+  height: 35px;
+}
+.clear{
+  clear: both;
+}
+
+/*.h2 {
+  float: left;
+  margin-top:  5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+font-family: Futura,"Trebuchet MS",Arial,sans-serif;
+font-style: normal;
+font-size: 25px;
+font-weight: 100;
+color: #B6A4A4;
+}
+input[name=report-error]{
+    background-color:  #ECAA0D;
+    color: white;
+    height: 35px;
+    width: 80px;
+    padding: auto;
+    margin-left: 10px;
+    float: left;
+  border-radius: 5px;
+}*/
+.body-block{
+  width: 100%;
+  position: relative;
+}
+.container{
+  width: 100%;
+  height: 50%;
+  padding: 0px;
+  overflow: auto;
+}
+div#sidetool{
+  width: 14.5%;
+  max-height: 300px;
+  padding: 5px 5px 0 5px;
+  background:#0CC5F3;
+  position: absolute;
+
+}
+#content{
+  overflow: auto;
+  width: 70%;
+  height: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#cmt-section{
+  max-width: 70%;
+  max-height: 600px;
+  color: white;
+  margin:auto;
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background:#9BFB34;
+}
+
+.cmt-container{
+  width: 100%;
+  max-height: 300px;
+  padding: 10px;
+  background: #C7EF8E;
+  margin:0 auto;
+
+}
+
+.trang-truoc.trang-sau{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  color:black;
+}
+
 
 /*--affiliate assets-*/
 
@@ -344,7 +469,6 @@ div.text-on-img {
 .one:hover {
   padding: 0;
   margin: 0;
-  background-color: #F44336;
   border-color: #fff;
   color: #fff;
 }
@@ -370,14 +494,135 @@ div.text-on-img {
 
 /*--end affiliate assets-*/
 
+
+
+
+/*--LOGIN SECTION-*/
+.login-btn{
+  font-family: 'Raleway', sans-serif;
+  background-color: #0CC5F3;
+  color: white;
+}
+
+.login-btn:hover{
+  background-color: #0ca7ce;
+  color: white;
+}
+
+.rememberme-text{
+  color: white;
+  padding-right: 1vw;
+  padding-left: 0.5vw;
+  border-right: 1px solid white;
+}
+
+.errorlogintext{
+  padding-left: 1vw;
+  color: red
+}
+
+#login_form{
+  -webkit-transition: width 2s; /* Safari */
+  transition: 1s;
+  opacity: 0.5;
+}
+
+#login_form > form{
+  border: 1px solid #517777;
+  border-radius: 20px;
+  padding: 10%;
+  background-color: #517777;
+}
+
+#login_form > form > h2{
+  color: #0CC5F3;
+  padding: 0px;
+  margin: 0px;
+}
+
+#login_form > form > div{
+  padding-top: 0.5vw;
+}
+
+#login_form > form > div > input.form-control{
+  width: 100%
+}
+
+#login_form:hover{
+  opacity: 1;
+}
+
+#register_form{
+  -webkit-transition: width 2s; /* Safari */
+  transition: 1s;
+  opacity: 0.5;
+}
+
+#register_form > img{
+  border-radius: 10px;
+}
+
+#register_form > button.div-center-content{
+  max-width: 20%;
+  position: absolute;
+  top: 50%;left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+#register_form:hover{
+  opacity: 1;
+}
+
+
+
 /* ETC (error message) */
-.error-body{
+
+.error-body.div-center-content{
   font-family: 'Raleway', sans-serif;
   background-color: #202E2E;
-  color: #bac2c6;
+  color: #636b6f;
   position: absolute;
+}
+
+.div-center-content{
+  position: relative;
   float: left;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.div-middle-content{
+  position: relative;
+  float: left;
+  left: 60%;
+  transform: translate(-60%);
+}
+
+
+#UpManga_form{
+  -webkit-transition: width 1s; /* Safari */
+  transition: 1s;
+  opacity: 0.5;
+}
+
+/*.tag-editor tags {
+  border-color: #d3d9dd;
+  border-radius: 3px;
+  padding: 5px 5px 1px 5px;
+  min-height: 79px;
+}
+
+tags {
+  display: block;
+  border: 1px solid #DDD;
+  padding-right: 0.3em 0.5em;
+  cursor: text;
+  overflow: hidden;
+}
+*/
+.mangaimg{
+  width: 1000px;
+  margin-top: 1vw;
 }

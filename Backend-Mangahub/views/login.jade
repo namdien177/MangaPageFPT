@@ -1,9 +1,24 @@
 extends layout
 
 block content
-    //example section displaying error
-
-    form(action='/login', method='post')
-        input(type='text', name='username', placeholder='Enter your Email here.')
-        input(type='password', name='password', placeholder='Enter your Password here.')
-        button(type='submit') Submit
+    .col-sm-12.col-xs-12.abspadd.login-main-div
+        #login_form.col-sm-6.col-xs-12.login-main-div
+            form.material-shadow(method='post', action='login')
+                h2 Login
+                hr
+                div
+                    input#email.form-control(type='email', name='username', placeholder='Email', required='')
+                div
+                    input#password.form-control(type='password', name='password', placeholder='password', style='width: 100%', required='')
+                div
+                    input(type='checkbox', name='Forgot Password', style='margin-top: 5%')
+                    span.rememberme-text Remember me
+                    - if (errors!=null)
+                        span#errormessage.errorlogintext #{ errors }
+                hr
+                button.btn.btn-block.login-btn(type='submit', value='login') Login
+                br
+                a(href='', style='color: #F0F8FF') Opps! I forgot my password :(
+        #register_form.col-sm-6.col-xs-12.login-main-div
+            img.img-responsive.material-shadow(src='/images/DefaultImg/register.png')
+            button.btn.btn-block.btn-primary.div-center-content(type='submit', value='login') Register

@@ -12,7 +12,7 @@ var {User} = require('../models/user');
 
 
 router.get('/', function(req, res, next) {
-    res.render('login',{status: req.session.login, errors: req.session.error});
+    res.render('login',{status: false, errors: req.session.error});
     req.session.error = null;
 });
 
@@ -33,7 +33,7 @@ router.post('/', function (req, res, next) {
 
     // redirect depends on pre-validation
     if (allerror){
-        req.session.error = allerror;
+        req.session.error = allerror[0];
         req.session.login = false;
         console.log('Got error');
         res.redirect('/login');
@@ -47,12 +47,13 @@ router.post('/', function (req, res, next) {
             req.session.token = user.tokens.token;
             console.log(user.tokens.token);
             req.session.login = true;
-            req.session.error = allerror;
+            req.session.error = allerror[0];
             console.log('no error');
             res.redirect('./');
         }).catch((rejectmessage)=>{
             req.session.token = null;
             req.session.login = false;
+            console.log(rejectmessage);
             req.session.error = rejectmessage;
             res.redirect('./login');
         });
