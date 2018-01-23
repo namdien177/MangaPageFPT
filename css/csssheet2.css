@@ -17,9 +17,6 @@ body>div{
 nav.navbar{
 	padding: 0px;
 	margin: 0px;
-  position: absolute;
-  top:0;
-  width: 100%;
 	background-color: #0CC5F3;
 	border-radius: 0px;
 	color: white;
@@ -45,6 +42,15 @@ nav.navbar{
 
 img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.material-shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border:0px;
+}
+
+a.material-shadow{
+  border-radius: 0;
 }
 
 .abspadd{
@@ -328,7 +334,7 @@ div.text-on-img {
   width: 4%;
   background-image: none;
 }
-<<<<<<< HEAD
+
 .breadcrumb{
   padding: 10px 16px;
   width: 100%;
@@ -360,16 +366,11 @@ div.text-on-img {
   width: 450px;
   height: 35px;
 }
-.btn-click{
-  background: #FFFFFF;
-  border-radius: 5px;
-padding: 7px 10px;
-}
 .clear{
   clear: both;
 }
 
-h2 {
+/*.h2 {
   float: left;
   margin-top:  5px;
   margin-left: 10px;
@@ -389,7 +390,7 @@ input[name=report-error]{
     margin-left: 10px;
     float: left;
   border-radius: 5px;
-}
+}*/
 .body-block{
 width: 100%;
 position: relative;
@@ -425,7 +426,7 @@ max-height: 300px;
   top:0; left:0; right:0; bottom:0;
   background:#9BFB34;
 }
-<<<<<<< HEAD
+
 .cmt-container{
   width: 100%;
 max-height: 300px;
@@ -435,26 +436,14 @@ margin:0 auto;
 
 }
 
-.btn-block{
-  padding:10px 10px ;
-  background: #FFFFFF;
-
-  margin: auto;
-}.trang-truoc.trang-sau{
+.trang-truoc.trang-sau{
   text-decoration: none;
   display: inline-block;
   padding: 8px 16px;
   color:black;
 }
-a:hover{
-  background-color: #918D8E;
-  color:white;
-}
 
-=======
 
-=======
->>>>>>> 4295f97adf5b0af203dfb9c3efcc5ffc342bedd2
 /*--affiliate assets-*/
 
 .myButt {
@@ -567,6 +556,13 @@ a:hover{
   transform: translate(-50%, -50%);
 }
 
+.div-middle-content{
+  position: relative;
+  float: left;
+  left: 60%;
+  transform: translate(-60%);
+}
+
 
 #UpManga_form{
     -webkit-transition: width 1s; /* Safari */
@@ -587,4 +583,9 @@ tags {
     padding-right: 0.3em 0.5em;
     cursor: text;
     overflow: hidden;
+}
+
+.mangaimg{
+  width: 1000px;
+  margin-top: 1vw;
 }
