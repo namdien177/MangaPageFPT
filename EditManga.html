@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width" />
-        <title>Testing update manga</title>
+        <title>Edit Manga</title>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -64,7 +64,7 @@
     
    
     	<form style="">
-        <h1 style="color: #0CC5F3"> Update manga</h1>
+        <h1 style="color: #0CC5F3"> Edit manga</h1>
         <hr>
     		<div>
     			
@@ -80,18 +80,17 @@
 			</div>
 
 			<div style="margin-top: 5%">
-				<p style="color: #0CC5F3; margin-top: 13px; margin-right: : 5px; "; >Bìa truyện<span class="text-danger"> *</span></p>
+				<p style="color: #0CC5F3; margin-top: 13px; margin-right: : 5px; ";>Bìa truyện<span class="text-danger"> *</span></p>
 
-                <button class="btn btn-primary" type="button" value="Bìa truyện" style="margin-top: 5px; border-radius: 5px; margin-bottom: 40px;">
-                <i class="glyphicon glyphicon-plus"></i> Upload bìa truyện</button>
+                <button class="btn btn-primary " type="button" value="Bìa truyện" style="margin-top: 10px; border-radius: 5px; margin-bottom: 40px; "><i class="glyphicon glyphicon-plus"></i> Upload bìa truyện</button>
 			</div>
 
-			<div style="margin-top: 4%;">
-				<p style="color: #0CC5F3; " class="">Tác giả  <i class="glyphicon glyphicon-question-sign"></i></p>
+			<div style="margin-top: 5%;">
+				<p style="color: #0CC5F3; margin-right: 25px" class="">Tác giả  <i class="glyphicon glyphicon-question-sign"></i></p>
                 <input id="tác giả" type="text" class="form-control" name ="tác giả" placeholder="Tên của tác giả">
 			</div>
 
-			<div style="margin-top:5%">
+			<div style="margin-top: 5%">
 				<p style="color: #0CC5F3">Nhóm dịch  <i class="glyphicon glyphicon-question-sign"></i></p>
                 <input id="Nhóm dịch" type="text" class="form-control" name ="Nhóm dịch" placeholder="Tên của nhóm dịch">
 			</div>
@@ -111,28 +110,36 @@
                 <input id="Tên khác" type="text" class="form-control" name ="tên khác" placeholder="Tên khác để search truyện dễ hơn">
 			</div>
 
-	   <div class="page-content" style="margin-top: 5%; margin-right: 5%">
+			  <div class="page-content" style="margin-top: 5%; margin-right: 5%">
     
-			<div class="container-fluid">
+				<div class="container-fluid">
 				  <h5 class="content-heading" style="margin-left: -3.5%; color: #0CC5F3">Tag Editor</h2>
 				  <div class="main-container">
 				    <div class="row">
-				      <div class="" style="">
-				        <div class="tag-editor" style=""> <!-- need wrap -->
-				          <textarea id="tag-editor" class="form-control" name="tags" placeholder='Write some tags' style="">foo, bar,buzz</textarea>
+				      <div class="">
+				        <div class="tag-editor"> <!-- need wrap -->
+				          <textarea id="tag-editor" class="form-control" name="tags" placeholder='Write some tags'>foo, bar,buzz</textarea>
 				        </div>
 				      </div>
 				    </div>
 				  </div>
 				</div>
-            
-  		</div>
+
+  				</div>
 
 
 
+			<div style="margin-top: 8%; margin-bottom: 20px">
+				<p style="color: #0CC5F3">Trạng Thái</p>
+               
+                 <select name="Region" style="margin-right: 25px; width: 10vw;">
+                  <option value="1">Đang tiến hành</option>
+                  <option value="2">Đã hoàn thành</option>
+                  <option value="3">Tạm ngưng/Drop</option>
+                 </select>
+			</div>
 			
-			
-			<button class="btn btn-block btn-primary" type="submit" value="" style="margin-top: 10%; border-radius: 20px; ">Ok</button>
+            <button class="btn btn-block btn-primary" type="submit" value="" style="margin-top: 10%; border-radius: 20px ">Edit</button>
 
 		
     	</form>
