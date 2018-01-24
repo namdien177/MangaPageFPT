@@ -356,8 +356,8 @@ div.text-on-img {
   border: 1px;
   float: left;
   border-color: #5044EC;
-  width: 450px;
   height: 35px;
+  text-align: center;
 }
 .clear{
   clear: both;
@@ -627,6 +627,6 @@ tags {
 }
 
 .mangaimg{
-  width: 1000px;
+  width: 100%;
   margin-top: 1vw;
 }

@@ -300,6 +300,8 @@ div.text-on-img {
   .carousel-move .carousel-inner > .active {
     left: 0;
   }
+  .carousel-move .carousel-inner .cloneditem-1,
+  .carousel-move .carousel-inner .cloneditem-2,
   .carousel-move .carousel-inner .cloneditem-3,
   .carousel-move .carousel-inner .cloneditem-4,
   .carousel-move .carousel-inner .cloneditem-5 {
@@ -363,27 +365,6 @@ div.text-on-img {
   clear: both;
 }
 
-/*.h2 {
-  float: left;
-  margin-top:  5px;
-  margin-left: 10px;
-  margin-bottom: 5px;
-font-family: Futura,"Trebuchet MS",Arial,sans-serif;
-font-style: normal;
-font-size: 25px;
-font-weight: 100;
-color: #B6A4A4;
-}
-input[name=report-error]{
-    background-color:  #ECAA0D;
-    color: white;
-    height: 35px;
-    width: 80px;
-    padding: auto;
-    margin-left: 10px;
-    float: left;
-  border-radius: 5px;
-}*/
 .body-block{
   width: 100%;
   position: relative;
@@ -626,3 +607,5 @@ tags {
   width: 1000px;
   margin-top: 1vw;
 }
+
+

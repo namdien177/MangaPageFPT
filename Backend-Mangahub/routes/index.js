@@ -5,7 +5,7 @@ var cm = require('../CustomizedModule');                       //  import custom
 
 /* GET homepage. */
 router.get('/', function getHome(req, res, next) {
-    res.render('index', { title: 'MangaHub - Homepage' });
+    res.render('index', { title: 'MangaHub - Homepage',});
 });
 /*
 function getRecentUpdate() {
