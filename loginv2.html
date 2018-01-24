@@ -53,20 +53,11 @@
         </div>
     </nav>
 
-    <div class="col-sm-12 col-xs-12 abspadd" style="display: block;padding: 1%">
-    
-    	<div class="col-sm-6 col-xs-12" style="display: inline-block;padding: 5%" id="login_form">
-
-    		<form method="post" action="login" style="border: 1px solid #517777; border-radius: 20px;padding: 10%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background-color: #517777" >
-                <h2 style="color: #0CC5F3;padding: 0px; margin: 0px">Login</h2>
-                <hr style="">
-    			<div style="">
-                    <input id="email" type="text" class="form-control" name ="userName" placeholder="Email or userName" style="width: 100%" required>
     <div class="col-sm-12 col-xs-12 abspadd login-main-div">
-    	<div class="col-sm-6 col-xs-12 login-main-div" id="login_form">	
-    		<form method="post" class="material-shadow" action="login" >
+        <div class="col-sm-6 col-xs-12 login-main-div" id="login_form"> 
+            <form method="post" class="material-shadow" action="login" >
                 <h2>Login</h2>
-                <hr>
+                <hr style="">
     			<div>
                     <input id="email" type="text" class="form-control" name ="userName" placeholder="Email or userName" required>
     			</div>
@@ -87,66 +78,60 @@
     	<div class="col-sm-6 col-xs-12  login-main-div" id="register_form">
             <img src="register.png" class="img-responsive material-shadow">
     		<button  class="btn btn-block btn-primary div-center-content" type="submit" value="login">Register</button>
-
+        </div>
         <!-- Modal -->
-                    <div class="modal fade" id="submit" role="dialog" style="padding: 7%">
-                        <div class="modal-dialog">
-                            <!-- Modal content-->
-                            <div class="modal-content">
+            <div class="modal fade" id="submit" role="dialog" style="padding: 7%">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
 
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title" style="color: #0CC5F3">Register</h4>
-                                </div>
-                                <div class="modal-body">
-
-                                    <form>
-                                        <div class="" style="">
-                                            
-                                            <input  id="email" type="text" class="form-control" name ="UserName" placeholder="UserName" style="width: 500px" required>
-                                        </div>
-
-                                        <div style="margin-top: 10px">
-                                            
-                                            <input type="text" name="Email" class="form-control" placeholder="Email" style="width: 500px" required>
-                                        </div>
-
-                                        <div class="" style="margin-top: 10px">
-                                          
-                                            <input id="password" type="password" class="form-control" name ="Password" placeholder="Password" style="width: 500px" required>
-                                        </div>
-
-                                        <div class="" style="margin-top: 10px">
-                                            
-                                            <input id="password" type="password" class="form-control" name ="RePassword" placeholder="RePassword" style="width: 500px" required>
-                                        </div>
-
-                                        <h5 style="float: left; width: 8vw; color: #0CC5F3">Gender</h4>
-                                        <div>
-                                            <div class="radio" style="float: left; width: 5vw; margin-top: 10px">
-                                              <label style="color: #0CC5F3"><input type="radio" name="optradio">Male</label>
-                                              
-                                            </div>
-                                            <div class="radio" style="float: left; width: 3vw; margin-top: 10px">
-                                              <label style="color: #0CC5F3"><input type="radio" name="optradio">FeMale</label>
-                                            </div>
-                                    
-                                            <div class="radio" style="float: left; width: 3vw; margin-top: 10px; margin-left: 35px">
-                                              <label style="color: #0CC5F3"><input type="radio" name="optradio">Others</label>
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                </div>
-
-                                <div class="modal-footer" style="margin-top: 30px">
-                                    <button class="btn btn-block btn-primary" type="button" class="btn btn-default" data-dismiss="modal">OK</button>
-                                </div>
-                            </div>  
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title" style="color: #0CC5F3">Register</h4>
                         </div>
-                    </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="" style="">
+                                    <input id="email" type="text" class="form-control" name ="UserName" placeholder="UserName" style="width: 500px" required>
+                                </div>
 
-</div>
+                                <div style="margin-top: 10px">
+                                    <input type="text" name="Email" class="form-control" placeholder="Email" style="width: 500px" required>
+                                </div>
+
+                                <div class="" style="margin-top: 10px">
+                                    <input id="password" type="password" class="form-control" name ="Password" placeholder="Password" style="width: 500px" required>
+                                </div>
+
+                                <div class="" style="margin-top: 10px">
+                                    <input id="password" type="password" class="form-control" name ="RePassword" placeholder="RePassword" style="width: 500px" required>
+                                </div>
+
+                                <h4 style="float: left; width: 8vw; color: #0CC5F3">Gender</h4>
+                                <div>
+                                    <div class="radio" style="float: left; width: 5vw; margin-top: 10px">
+                                      <label style="color: #0CC5F3"><input type="radio" name="optradio">Male</label>
+                                      
+                                    </div>
+                                    <div class="radio" style="float: left; width: 3vw; margin-top: 10px">
+                                      <label style="color: #0CC5F3"><input type="radio" name="optradio">FeMale</label>
+                                    </div>
+                            
+                                    <div class="radio" style="float: left; width: 3vw; margin-top: 10px; margin-left: 35px">
+                                      <label style="color: #0CC5F3"><input type="radio" name="optradio">Others</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer" style="margin-top: 30px">
+                            <button class="btn btn-block btn-primary" type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+    </div>
 
 </body>
 </html>
