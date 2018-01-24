@@ -4,6 +4,7 @@ const _ = require('lodash');
 var login = require('./login');
 const mongoose = require('mongoose');
 var {User} = require('../models/user');
+var session = require('express-session');
 
 /* GET Login page */
 /**
@@ -45,15 +46,15 @@ router.post('/', function (req, res, next) {
         User.findByCredentials(username,password).then((user)=>{
             console.log('logged in -> saving token to session');
             req.session.token = user.tokens.token;
-            console.log(user.tokens.token);
             req.session.login = true;
+            res.locals.user= req.user = user;
+            console.log(user);
             req.session.error = allerror[0];
             console.log('no error');
             res.redirect('./');
         }).catch((rejectmessage)=>{
             req.session.token = null;
             req.session.login = false;
-            console.log(rejectmessage);
             req.session.error = rejectmessage;
             res.redirect('./login');
         });
