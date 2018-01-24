@@ -22,6 +22,11 @@ nav.navbar{
 	color: white;
 }
 
+.login-main-div{
+  display: block;
+  padding: 5%;
+}
+
 /* Title */
 .navbar-default .navbar-brand {
     color: white;
@@ -330,24 +335,12 @@ div.text-on-img {
 .carousel-move .cloneditem-5, {
   display: none;
 }
+
 .carousel-move .carousel-control {
   width: 4%;
   background-image: none;
 }
 
-.breadcrumb{
-  padding: 10px 16px;
-  width: 100%;
-  height: 40px;
-  color: #5A6C6F;
-  font: bold;
-
-}
-
-.seperator{
-  color:#857C7C;
-  font: bold;
-}
 .home {
   font-size: medium;
   color:#686BE9;
@@ -363,8 +356,8 @@ div.text-on-img {
   border: 1px;
   float: left;
   border-color: #5044EC;
-  width: 450px;
   height: 35px;
+  text-align: center;
 }
 .clear{
   clear: both;
@@ -474,9 +467,8 @@ margin:0 auto;
 }
 
 .one:hover {
-    padding: 0;
-   margin: 0;
-  background-color: ;
+  padding: 0;
+  margin: 0;
   border-color: #fff;
   color: #fff;
 }
@@ -502,6 +494,10 @@ margin:0 auto;
 
 /*--end affiliate assets-*/
 
+
+
+
+/*--LOGIN SECTION-*/
 .login-btn{
   font-family: 'Raleway', sans-serif;
   background-color: #0CC5F3;
@@ -513,10 +509,47 @@ margin:0 auto;
   color: white;
 }
 
+.rememberme-text{
+  color: white; 
+  padding-right: 1vw;
+  padding-left: 0.5vw;
+  border-right: 1px solid white;
+}
+
+.errorlogintext{
+  padding-left: 1vw; 
+  color: red
+}
+
 #login_form{
     -webkit-transition: width 2s; /* Safari */
     transition: 1s;
     opacity: 0.5;
+}
+
+#login_form > form{
+  border: 1px solid #517777; 
+  border-radius: 20px;
+  padding: 10%;
+  background-color: #517777;
+}
+
+#login_form > form > h2{
+  color: #0CC5F3;
+  padding: 0px; 
+  margin: 0px;
+}
+
+#login_form > form > div{
+  padding-top: 0.5vw;
+}
+
+#login_form > form > div > input.form-control{
+  width: 100%
+}
+
+#login_form:hover{
+    opacity: 1;
 }
 
 #register_form{
@@ -525,8 +558,16 @@ margin:0 auto;
     opacity: 0.5;
 }
 
-#login_form:hover{
-    opacity: 1;
+#register_form > img{
+  border-radius: 10px;
+}
+
+#register_form > button.div-center-content{
+  max-width: 20%;
+  position: absolute;
+  top: 50%;left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
 }
 
 #register_form:hover{
@@ -586,6 +627,6 @@ tags {
 }
 
 .mangaimg{
-  width: 1000px;
+  width: 100%;
   margin-top: 1vw;
 }

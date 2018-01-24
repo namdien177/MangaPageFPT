@@ -46,13 +46,14 @@
                     </div>
             </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="loginv2.html"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="loginv2.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+<<<<<<< HEAD
     <div class="col-sm-12 col-xs-12 abspadd" style="display: block;padding: 1%">
     
     	<div class="col-sm-6 col-xs-12" style="display: inline-block;padding: 5%" id="login_form">
@@ -62,13 +63,22 @@
                 <hr style="">
     			<div style="">
                     <input id="email" type="text" class="form-control" name ="userName" placeholder="Email or userName" style="width: 100%" required>
+=======
+    <div class="col-sm-12 col-xs-12 abspadd login-main-div">
+    	<div class="col-sm-6 col-xs-12 login-main-div" id="login_form">	
+    		<form method="post" class="material-shadow" action="login" >
+                <h2>Login</h2>
+                <hr>
+    			<div>
+                    <input id="email" type="text" class="form-control" name ="userName" placeholder="Email or userName" required>
+>>>>>>> f82e63976a1c8f3e073a8d617866474d295d766b
     			</div>
-    			<div style="margin-top: 1vw">
+    			<div>
                     <input id="password" type="password" class="form-control" name ="Password" placeholder="password" style="width: 100%" required>
     			</div>
                 <div>
-                    <input type="checkbox" name="Forgot Password" style="margin-top: 5%"><span style="color: white; padding-right: 1vw;padding-left: 0.5vw;border-right: 1px solid white">Remember me</span>
-                    <span style="padding-left: 1vw; color: red">Your username and password does not match</span>
+                    <input type="checkbox" name="Forgot Password" style="margin-top: 5%"><span class="rememberme-text">Remember me</span>
+                    <span class="errorlogintext" id="errormessage">Your username and password does not match</span>
                 </div>
     			<hr>
     			<button class="btn btn-block login-btn" type="submit" value="login" style="">Login</button>
@@ -77,6 +87,9 @@
     		</form>
     	</div>
 
+    	<div class="col-sm-6 col-xs-12  login-main-div" id="register_form">
+            <img src="register.png" class="img-responsive material-shadow">
+    		<button  class="btn btn-block btn-primary div-center-content" type="submit" value="login">Register</button>
     	<div class="col-sm-6 col-xs-12" style="display: inline-block;padding: 5%" id="register_form">
             <img src="register.png" style="width: 100%; height: auto;border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     		<button  class="btn btn-block btn-primary" type="submit" value="login" style="max-width: 20%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 18px;" data-toggle="modal" data-target="#submit">Register</button>
