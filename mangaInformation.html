@@ -46,12 +46,13 @@
                     </div>
             </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="loginv2.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="loginv2.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="col-sm-offset-2 col-xs-offset-0 col-sm-8" style="padding:0px;">
     	<div class="" style="width: 100%; margin-bottom: 0.5%;background-color: white; display: flex;margin-top: 0.5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border:0px; border-radius: 10px">
     		<div class="" style="flex: 1; padding:1%">
@@ -63,7 +64,7 @@
 				<div style="display: flex; flex-wrap: wrap;">
 					<div style="flex: 3;flex-wrap: wrap;padding-right: 1%;border-right: 1px solid #b4b4b4">
 						<p style="" class="wrap-three-row">
-							asjdnjsandnsadlk sandl jsanldk naslkdn lkans lkdnsalk nkdn kasnk naksn lkdnsaonk dnalksn dlknas lkdnlka snldknaslk dnalks ndlkasn lkndaks nlkdasn lkdlk asnlk dnsalk dnlk asndk ank sdnsalk
+							One day, the main character saw a girl jump on the wanrrawrorqwp
 						</p>
 					</div>
 					<div style="flex: 1;padding: 1%;">
@@ -74,9 +75,70 @@
 				</div>
     		</div>
     	</div>
-    	<div class="" style="width: 100%; margin-bottom: 0.5%;background-color: white">
-    		adsjo
-    	</div>
-    </div>
+
+        <div class="tab" style="color: #0CC5F3; display: flex;" >
+              
+              <button class="tablinks" onclick="openCity(event, 'Chap')" 
+              id="Open">Chap</button>
+              <button class="tablinks" onclick="openCity(event, 'Teamtrans')">Team dịch</button>
+              <button class="tablinks" onclick="openCity(event, 'Author')">Author</button>
+        </div>
+            
+     
+        <div id="Chap" class="tabcontent col-md-12 col-xs-12" style="color: #0CC5F3; min-height: 15vw" >
+              <h3>Number chap</h3>
+              <hr>
+              <div class="col-md-5 col-xs-12">
+                  <h4>Number chap</h4>
+                  <hr>
+                  <p style="color: #0CC5F3">01</p>
+              </div>
+              <div class="col-md-5 col-xs-12">
+                  <h4>Name chap</h4>
+                    <hr>
+                  <p style="color: #0CC5F3">The sunrise come</p>
+              </div>
+
+              <div class="col-md-2 col-xs-12">
+                  <h4>Lượt view</h4>
+                  <hr>
+                  <p style="color: #0CC5F3">789</p>
+              </div>
+              
+        </div>
+
+        <div id="Teamtrans" class="tabcontent col-md-12 col-xs-12" style="color: #0CC5F3">
+              <h3>Team dịch</h3>
+              <p>Some information shit about this team trans fucking late</p>
+        </div>
+
+        <div id="Author" class="tabcontent " style="color: #0CC5F3">
+              <h4>Author</h4>
+              <hr>
+              <p>This author is the master of decribe introverted character </p>
+        </div>
+
+</div>
+
+    <script>
+    function openCity(evt, nameTab) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace("active", "");
+        }
+        document.getElementById(nameTab).style.display = "block";
+        evt.currentTarget.className += " active";
+
+        
+    }
+    // this fucking shit for open on the first lload page :v
+    document.getElementById("Open").click();
+
+    </script>
 </body>
 </html>
