@@ -15,6 +15,7 @@ var search = require('./routes/search');
 var register = require('./routes/register');
 var create_manga = require('./routes/create-manga');
 var update_manga = require('./routes/update-manga');
+var {authenticate} = require('./middleware/authenticate');
 var app = express();
 
 // view engine setup
@@ -31,8 +32,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(eValidatior());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({secret:'max', saveUninitialized:false, resave:false}));
-
+app.use(session({secret:'max', saveUninitialized:false, resave:false,cookie:{maxAge:1000*60*60*24}}));
+app.use((req, res, next) => {
+    res.locals.user = req.session.login;
+    console.log(req.session.login);
+    next();
+});
 // Routes for site:
 app.use('/', index);                    //homepage
 app.use('/login', login);               //login page
