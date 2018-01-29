@@ -3,21 +3,13 @@
 <head>
 	<title>MangaHub</title>
 
-	<meta name="viewport" content="width=device-width" />
-        <title>Testing Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="shortcut icon" href="favicon.ico" />
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-        <!-- CSS sheets -->
-        <link rel="stylesheet" type="text/css" href="css/csssheet2.css">
+    <!-- CSS sheets -->
+    <link rel="stylesheet" type="text/css" href="css/csssheet2.css">
 
 </head>
 <body>
@@ -47,10 +39,21 @@
                                 </button>
                             </div>
                     </div>
-            </form>
+                </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="loginv2.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"><span class="glyphicon glyphicon-user"></span> Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Account</li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Logout</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Content Publisher</li>
+                            <li><a href="#">Manga</a></li>
+                            <li><a href="#">Your team</a></li>
+                            <li><a href="#">Your artist page</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

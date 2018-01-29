@@ -42,12 +42,28 @@ html
                               button.btn.btn-default(type='submit')
                                   i.glyphicon.glyphicon-search
                   ul.nav.navbar-nav.navbar-right
-                      li
-                          if user != null
-                                  a(href='./login')
-                                      span.glyphicon.glyphicon-user
-                                      |  Login / Register
-                          else
+                      if user != null
+                          li.dropdown
+                              a.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true')
+                                  span.glyphicon.glyphicon-user
+                                  |  Account
+                                  span.caret
+                              ul.dropdown-menu
+                                  li.dropdown-header Account
+                                  li
+                                      a(href='./users') Profile
+                                  li
+                                      a(href='./login/sign-out') Logout
+                                  li.divider
+                                  li.dropdown-header Content Publisher
+                                  li
+                                      a(href='#') Manga
+                                  li
+                                      a(href='#') Your team
+                                  li
+                                      a(href='#') Your artist page
+                      else
+                          li
                               a(href='./login')
                                   span.glyphicon.glyphicon-user
                                   |  Login1 / Register
@@ -56,3 +72,5 @@ html
     script(type='text/javascript', src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
     script(type='text/javascript', src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
     script(type='text/javascript', src='/javascripts/jvs.js')
+
+
