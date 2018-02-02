@@ -235,6 +235,16 @@ a.material-shadow{
   text-align:justify;
 }
 
+.wrap-two-row{
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align:justify;
+}
+
 .wrap-three-row{
   overflow: hidden;
   text-overflow: ellipsis;

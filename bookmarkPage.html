@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Bookmark</title>
+
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./Javsript/jvs.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/completeCSS.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+		<a class="navbar-brand" href="#">Acomici</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Thể Loại</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Tác giả</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Nhóm dịch</a>
+				</li>
+				<form class="form-inline my-2 my-lg-0" action="" method="get">
+					<input class="form-control mr-sm-2" type="search" placeholder="Nhập bất kì từ khóa nào!" aria-label="Search">
+					<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Tìm ngay</button>
+				</form>
+			</ul>
+			<ul class="navbar-nav justify-content-end">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Tủ truyện</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Do Hoang Nam
+					</a>
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+						<h6 class="dropdown-header">Cá Nhân</h6>
+						<a class="dropdown-item" href="#">Trang Cá Nhân</a>
+						<a class="dropdown-item" href="#">Đăng Xuất</a>
+						<div class="dropdown-divider"></div>
+						<h6 class="dropdown-header">Khu vực sáng tác</h6>
+						<a class="dropdown-item" href="#">Đăng Mới</a>
+						<a class="dropdown-item" href="#">Chỉnh Sửa</a>
+						<a class="dropdown-item" href="#">Tùy Chọn</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="col-sm-10 col-xs-12 div-padding-top">
+		<div class="col-xs-12 col-sm-12 title-center-align">
+			<h2 class="title-left">Tủ truyện</h2>
+			<a href="#" class="btn btn-outline-primary title-right">Chia sẻ tủ truyện</a>
+			<h2 class="title-right">Tổng: <small>127</small> </h2>
+		</div>
+		<table class="table table-sm table-responsive">
+			<thead>
+				<tr>
+					<th scope="col" style="width: 5%">#</th>
+					<th scope="col" style="width: 50%">
+						<a href="" class="btn btn-outline-info" style="width: 100%">Tên truyện <i class="fas fa-sort"></i></a>
+					</th>
+					<th scope="col" style="width: 20%">
+						<a href="" class="btn btn-outline-info" style="width: 100%">Chap <i class="fas fa-sort"></i></a>
+					</th>
+					<th scope="col" style="width: 25%">
+						<a href="" class="btn btn-outline-info" style="width: 100%">Hành động <i class="fas fa-sort"></i></a>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="table-hide" id="1">
+					<th scope="row">1</th>
+					<td onclick="clickShowHideDescManga(1)">
+						<p class="wrap-two-row">
+							Bakemonogatarisssssssss a da sd sad asdsadas dsa das das d asd as dsa dsa dsa dsa d sad sa das dsa dqw dasd asd asd aw da fasf asas dsa dsadasmd vaskd iusadiu uwhdiuq wiud iusadiu aiushd isah iudhsadausih dasiuda
+						</p>
+					</td>
+					<td>Chap 5</td>
+					<td>
+						<a href="" class="btn btn-outline-success">Đã Đọc</a>
+						<a href="" class="btn btn-outline-light">Xóa</a> 
+					</td>
+				</tr>
+				<tr class="table-hide-info" id="1hide">
+					<th scope="row">></th>
+					<td class="tb-description">
+						<div class="img">
+							<img src="3166_dd48_960.jpeg" class="img-responsive">
+						</div>
+						<div class="desc">
+							<h5>Description: </h5>
+							<hr>
+							<p class="">this is the description of the manga</p>
+						</div>
+					</td>
+					<td>
+						<p>The new Begin</p>
+					</td>
+					<td>
+						<a href="" class="btn btn-outline-info">Đọc ngay</a>
+					</td>
+				</tr>
+				<tr class="table-hide" id="2">
+					<th scope="row">2</th>
+					<td onclick="clickShowHideDescManga(2)">
+						<p class="wrap-two-row">
+							Bakemonogatarisssssssss a da sd sad asdsadas dsa das das d asd as dsa dsa dsa dsa d sad sa das dsa dqw dasd asd asd aw da fasf asas dsa dsadasmd vaskd iusadiu uwhdiuq wiud iusadiu aiushd isah iudhsadausih dasiuda
+						</p>
+					</td>
+					<td>Chap 5</td>
+					<td>
+						<a href="" class="btn btn-outline-success">Đã Đọc</a>
+						<a href="" class="btn btn-outline-light">Xóa</a> 
+					</td>
+				</tr>
+				<tr class="table-hide-info" id="2hide">
+					<th scope="row">></th>
+					<td class="tb-description">
+						<div class="img">
+							<img src="3166_dd48_960.jpeg" class="img-responsive">
+						</div>
+						<div class="desc">
+							<h5>Description: </h5>
+							<hr>
+							<p class="">this is the description of the manga</p>
+						</div>
+					</td>
+					<td>
+						<p>The new Begin</p>
+					</td>
+					<td>
+						<a href="" class="btn btn-outline-info">Đọc ngay</a>
+					</td>
+				</tr>
+				<tr class="table-hide table-unread" id="3">
+					<th scope="row">3</th>
+					<td onclick="clickShowHideDescManga(3)">
+						<p class="wrap-two-row">
+							Bakemonogatarisssssssss a da sd sad asdsadas dsa das das d asd as dsa dsa dsa dsa d sad sa das dsa dqw dasd asd asd aw da fasf asas dsa dsadasmd vaskd iusadiu uwhdiuq wiud iusadiu aiushd isah iudhsadausih dasiuda
+						</p>
+					</td>
+					<td>Chap 5</td>
+					<td>
+						<a href="" class="btn btn-outline-warning">Chưa đọc</a>
+						<a href="" class="btn btn-outline-light">Xóa</a> 
+					</td>
+				</tr>
+				<tr class="table-hide-info table-unread" id="3hide">
+					<th scope="row">></th>
+					<td class="tb-description">
+						<div class="img">
+							<img src="3166_dd48_960.jpeg" class="img-responsive">
+						</div>
+						<div class="desc">
+							<h5>Description: </h5>
+							<hr>
+							<p class="">this is the description of the manga</p>
+						</div>
+					</td>
+					<td>
+						<p>The new Begin</p>
+					</td>
+					<td>
+						<a href="" class="btn btn-outline-info">Đọc ngay</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>Bakemonogatari</td>
+					<td>Chap 5</td>
+					<td>
+						<a href="" class="btn btn-outline-success">Đã đọc</a>
+						<a href="" class="btn btn-outline-light">Xóa</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">5</th>
+					<td>Bakemonogatari</td>
+					<td>Chap 5</td>
+					<td>
+						<a href="" class="btn btn-outline-success">Đã đọc</a>
+						<a href="" class="btn btn-outline-light">Xóa</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">6</th>
+					<td>Bakemonogatari</td>
+					<td>Chap 5</td>
+					<td>
+						<a href="" class="btn btn-outline-success">Đã đọc</a>
+						<a href="" class="btn btn-outline-light">Xóa</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">7</th>
+					<td>Bakemonogatari</td>
+					<td>Chap 5</td>
+					<td>
+						<a href="" class="btn btn-outline-success">Đã đọc</a>
+						<a href="" class="btn btn-outline-light">Xóa</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">8</th>
+					<td>Bakemonogatari</td>
+					<td>Chap 5</td>
+					<td>
+						<a href="" class="btn btn-outline-success">Đã đọc</a>
+						<a href="" class="btn btn-outline-light">Xóa</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">9</th>
+					<td>Bakemonogatari</td>
+					<td>Chap 5</td>
+					<td>
+						<a href="" class="btn btn-outline-success">Đã đọc</a>
+						<a href="" class="btn btn-outline-light">Xóa</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">10</th>
+					<td>Bakemonogatari</td>
+					<td>Chap 5</td>
+					<td>
+						<a href="" class="btn btn-outline-success">Đã đọc</a>
+						<a href="" class="btn btn-outline-light">Xóa</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

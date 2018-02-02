@@ -1,6 +1,7 @@
 $( document ).ready(function() {
    var count = 0;
 });
+
 (function(){
   $('#updateslide').carousel({ interval: false });
   
@@ -25,6 +26,7 @@ $( document ).ready(function() {
     }
   });
 }());
+
 function toggletrans(){
   var element = document.getElementById("author");
     element.classList.remove("slideUp");
@@ -42,4 +44,12 @@ function toggleauthor(){
     var element = document.getElementById("form-author");
     element.classList.remove("form-hide");
     document.getElementById('author').classList.toggle('slideUp')
+}
+
+function clickShowHideDescManga(id){
+  $('#'+id+'hide').toggle(0);
+  $('#'+id+'hide').mouseleave(function(event) {
+    $('#'+id+'hide').css({
+      display: 'none'});
+  });
 }

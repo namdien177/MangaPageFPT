@@ -1,0 +1,164 @@
+/**
+	Complete and organized CSS sheet
+**/
+
+body{
+	background-color: #202E2E;
+	padding: 0px;
+	margin: 0px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
+}
+
+body>div{
+	padding: 0px;
+	margin: 0px;
+}
+
+a , a:hover , a:visited{
+  text-decoration: none;
+}
+
+nav.navbar , nav.nav{
+	background-color: #0CC5F3;
+	color: white;
+}
+
+
+
+
+
+
+/* named class/id */
+
+.dropdown-menu ,.material-shadow nav.navbar , nav.nav , .table{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title-left{
+	float: left;
+	display: block;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+.title-right{
+	float: right;
+	display: block;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+.title-center-align{
+	text-align: center;
+	vertical-align: middle;
+}
+
+a.title-right{
+	float: right;
+}
+
+.div-padding-top{
+	padding-top: 1vw;
+	display: inline-block;
+}
+
+.div-padding-top > div{
+	display: inline-block;
+}
+
+.table{
+	background-color: #333333
+}
+
+.table > tbody > tr > td > a.btn{
+	display: inline-block;
+	float: left;
+	width: 50%;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-radius: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.table td , .table th{
+	border-top: 0;
+}
+
+.table > tbody > tr > td: nth-child(3) {
+	padding: 0
+}
+
+.table > tbody > tr > td , .table > tbody > tr > th , .table > thead > tr > th{
+	vertical-align: middle;
+}
+
+tr.table-unread{
+	color: white;
+	background-color:#3B453B;
+}
+
+tr.table-hide{
+	transition: 0.5s;
+}
+
+.table-hide-info{
+	display: none;
+	transition: 0.25s;
+}
+
+.tb-description > div.img{
+	display: block;
+	width: 20%;
+}
+
+.tb-description > div.img > img{
+	width: 100%
+}
+
+.tb-description >div.desc{
+	width: 80%;
+	padding-left: 1vw;
+}
+
+.table > tbody > tr.table-hide-info > td > a.btn{
+	width: 100%;
+}
+
+.tb-description{
+	display: flex;
+}
+
+.navbar{
+	padding: .2rem 1rem;
+}
+
+.wrap-one-row{
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align:justify;
+}
+
+.wrap-two-row{
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align:justify;
+}
+
+.wrap-three-row{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-align:justify;
+}
