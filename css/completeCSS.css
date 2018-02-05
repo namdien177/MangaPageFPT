@@ -22,8 +22,8 @@ a , a:hover , a:visited{
 nav.navbar , nav.nav{
 	background-color: #0CC5F3;
 	color: white;
+	padding: .2rem 1rem;
 }
-
 
 
 
@@ -58,12 +58,13 @@ a.title-right{
 	float: right;
 }
 
-.div-padding-top{
+.div-padding-top-bottom{
 	padding-top: 1vw;
+	padding-bottom: 1vw;
 	display: inline-block;
 }
 
-.div-padding-top > div{
+.div-padding-top-bottom > div{
 	display: inline-block;
 }
 
@@ -99,39 +100,53 @@ tr.table-unread{
 	background-color:#3B453B;
 }
 
-tr.table-hide{
-	transition: 0.5s;
-}
-
-.table-hide-info{
+div.table-hide-info{
 	display: none;
-	transition: 0.25s;
+	padding: 0;
 }
 
-.tb-description > div.img{
-	display: block;
-	width: 20%;
+div.table-hide-info-inner{
+	left: 0%;
+	bottom: 1%; 
+	display: flex; 
+	height: 25%; 
+	max-width: 50%; 
+	min-width: 40%; 
+	background-color: #2A376F; 
+	color: white; 
+	position: fixed;
+	flex-wrap:wrap;
 }
 
-.tb-description > div.img > img{
-	width: 100%
+div.table-hide-info-inner-img{
+	height: 100% ; 
+	flex: 1
 }
 
-.tb-description >div.desc{
-	width: 80%;
-	padding-left: 1vw;
+div.table-hide-info-inner-img > img{
+	height: 100%;
+	width: auto;
 }
 
-.table > tbody > tr.table-hide-info > td > a.btn{
-	width: 100%;
-}
-
-.tb-description{
+div.table-hide-info-inner-desc{
+	height: 100% ; 
+	flex: 4;
 	display: flex;
+	flex-direction: column; 
+	padding: 1%
 }
 
-.navbar{
-	padding: .2rem 1rem;
+div.table-hide-info-inner-desc > h4{
+	padding: 0; 
+	flex: 1
+}
+
+div.table-hide-info-inner-desc > p:first-child{
+	flex: 3
+}
+
+div.table-hide-info-inner-desc > p:nth-child(2){
+	flex: 1
 }
 
 .wrap-one-row{

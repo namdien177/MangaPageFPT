@@ -47,9 +47,10 @@ function toggleauthor(){
 }
 
 function clickShowHideDescManga(id){
-  $('#'+id+'hide').toggle(0);
-  $('#'+id+'hide').mouseleave(function(event) {
-    $('#'+id+'hide').css({
-      display: 'none'});
+  $( ".table-hide-info" ).each(function( index ) {
+    if (!($(this).attr('id')== (id+'hide'))) {
+      $(this).css('display', 'none');
+    }
   });
+  $('#'+id+'hide').toggle('slow');
 }

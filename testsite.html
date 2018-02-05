@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function($) {
+		var classid = 'start->';
+		$('div').each( function(element, index) {
+			classid +=$(this).attr('id');
+		});
+		alert(classid);
+	});
+</script>
+</head>
+<body>
+
+	<div style="left: 1%;bottom: 1%; display: flex; height: 25%; max-width: 50%; min-width: 40%; background-color: #2A376F; color: white; position: fixed;flex-wrap:wrap;" id="testing123">
+		<div style="height: 100% ; flex: 1">
+			<img src="3166_dd48_960.jpeg" style="height: 100%;width: auto;" class="float-left">
+		</div>
+		<div style="height: 100% ; flex: 4;display: flex;flex-direction: column; padding: 1%" class="float-left">
+			<h4 style="padding: 0; flex: 1">Bakemonogatari</h4>
+			<p style="flex: 3">this is an example of floating information div on site when hover. a longer one will be splited into two</p>
+			<p style="flex: 1">Đã đọc: <span class="text-warning">2/40</span> <span style="float: right;">Rating: <span class="text-info">4.8/5</span></span></p>
+		</div>
+	</div>
+
+</body>
+</html>
