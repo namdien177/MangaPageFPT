@@ -5,7 +5,7 @@
 
 	<meta name="viewport" content="width=device-width" />
         <title>Testing Project</title>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -18,41 +18,55 @@
 
         <!-- CSS sheets -->
         <link rel="stylesheet" type="text/css" href="css/csssheet2.css">
+        <link rel="stylesheet" type="text/css" href="./css/completeCSS.css">
 </head>
 <body>
 	<!--Header-->
-	<nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navibar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span> 
-                    </button>
-                    <a class="navbar-brand" href="#">MangaHub</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navibar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Category</a></li>
-                    <li><a href="#">Author</a></li>
-                    <li><a href="#">Translate Team</a></li>
-                </ul>
-                <form class="navbar-form navbar-left">
-                    <div class="input-group">
-                            <input type="text" style="min-width: 25vw" class="form-control" placeholder="Search manga name, author, translate team, ...">
-                            <div class="input-group-btn">
-                                            <button class="btn btn-default" type="submit">
-                                                    <i class="glyphicon glyphicon-search"></i>
-                                            </button>
-                                </div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <a class="navbar-brand" href="#">Acomici</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Thể Loại</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tác giả</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nhóm dịch</a>
+                </li>
+                <form class="form-inline my-2 my-lg-0" action="" method="get">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Nhập bất kì từ khóa nào!" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Tìm ngay</button>
+                </form>
+            </ul>
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tủ truyện</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Do Hoang Nam
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <h6 class="dropdown-header">Cá Nhân</h6>
+                        <a class="dropdown-item" href="#">Trang Cá Nhân</a>
+                        <a class="dropdown-item" href="#">Đăng Xuất</a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-header">Khu vực sáng tác</h6>
+                        <a class="dropdown-item" href="#">Đăng Mới</a>
+                        <a class="dropdown-item" href="#">Chỉnh Sửa</a>
+                        <a class="dropdown-item" href="#">Tùy Chọn</a>
                     </div>
-            </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                </ul>
-            </div>
+                </li>
+            </ul>
         </div>
     </nav>
 	<!--End Header-->
@@ -63,8 +77,44 @@
 				</button>
 				<!--Form create-->
 				<div id="form-author" style="background-color: white;" class='myButt one form-hide'>
-					<form>
-					
+					<form style="padding: 6%">
+                        <h3 style="color: #000000; text-align: center; margin-bottom: 4% font: Helvetica" >TÁC GIẢ</h3>
+					       
+                           <div>
+                                
+                                <input id="Author" type="text" class="form-control" name ="tên tác giả" placeholder="Tên tác giả" required>
+                            </div>
+
+                            <div style="margin-top: 5%">
+                                
+                                <input id="" type="text" class="form-control" name ="Miêu tả" placeholder="Miêu tả" required>
+                                </input>
+                            </div>
+
+
+
+                            <div style="margin-top: 5%">
+                                
+                                <input id="phonenumber" type="text" class="form-control" name ="phonenumber" placeholder="Số điện thoại" required">
+                            </div>
+
+                            <div style="margin-top: 5%">
+                                
+                                <input id="link" type="text" class="form-control" name ="linkfb" placeholder="Link facebook của tác giả" required">
+                            </div>
+
+
+                            <div style="margin-top: 5%">
+                                
+                                <input id="" type="text" class="form-control" name ="người đại diện" placeholder="Người đại diện" required">
+                            </div>
+
+                             <div style="margin-top: 5%">
+                                
+                                <input id="" type="text" class="form-control" name ="kinh nghiệm" placeholder="Kinh nghiệm" required">
+                            </div>
+
+                            <button class="btn btn-block btn-primary" type="submit" value="" style="margin-top: 8%; border-radius: 20px; ">Ok</button>
 					</form>
 				</div>
 				<!--End Form create-->
@@ -74,9 +124,35 @@
 				Nhóm dịch
 				</button>
 				<!--Form create-->
-				<div id="form-translator" style="background-color: white;" class='myButt one form-hide'>
-					<form>
-						
+				<div id="form-translator" style="background-color: white; " class='myButt one form-hide'>
+					<form style="padding: 7%">
+    						
+                        <h3 style="color: #000000; text-align: center; margin-bottom: 4% font: Helvetica">Nhóm dịch</h3>
+
+                            <div>
+                                
+                                <input id="Tên nhóm" type="text" class="form-control" name ="tên nhóm" placeholder="Tên nhóm" required>
+                            </div>
+
+                            
+
+                            <div style="margin-top: 5%">
+                                
+                                <input id="Notification" type="text" class="form-control" name ="Notification" placeholder="Cái tiêu đề cho hot :v" required">
+                            </div>
+
+                            <div style="margin-top: 5%">
+                                
+                                <input id="phonenumber" type="text" class="form-control" name ="phonenumber" placeholder="số điện thoại" required">
+                            </div>
+
+                            <div style="margin-top: 5%">
+                                
+                                <input id="link" type="text" class="form-control" name ="linkfb" placeholder="copy linkfb vào đây" required">
+                            </div>
+
+
+                            <button class="btn btn-block btn-primary" type="submit" value="" style="margin-top: 8%; border-radius: 20px; ">Ok</button>
 					</form>
 				</div>
 				<!--End Form create-->
